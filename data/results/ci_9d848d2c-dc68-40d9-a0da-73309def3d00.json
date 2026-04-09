@@ -1,0 +1,646 @@
+{
+  "run_id": "9d848d2c-dc68-40d9-a0da-73309def3d00",
+  "own_brand": {
+    "name": "Maruti Suzuki Swift",
+    "website": "https://www.marutisuzuki.com/swift",
+    "positioning": "High-mileage, city-friendly hatchback with wide service network\n- Cadence: Weekly"
+  },
+  "competitors": [
+    {
+      "competitor_name": "- Maruti Baleno",
+      "website": "https://www.nexaexperience.com/baleno",
+      "cvs_score": 40.0,
+      "cvs_category": "steady",
+      "threat_level": "medium",
+      "what_changed": "- Maruti Baleno changed 4 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "aggressive",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "- Maruti Baleno",
+          "page_type": "homepage",
+          "url": "https://www.nexaexperience.com/baleno/",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        },
+        {
+          "competitor_name": "- Maruti Baleno",
+          "page_type": "pricing",
+          "url": "https://www.nexaexperience.com/baleno/pricing",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        },
+        {
+          "competitor_name": "- Maruti Baleno",
+          "page_type": "features",
+          "url": "https://www.nexaexperience.com/baleno/features",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        },
+        {
+          "competitor_name": "- Maruti Baleno",
+          "page_type": "about",
+          "url": "https://www.nexaexperience.com/baleno/about",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Toyota Glanza",
+      "website": "https://www.toyotabharat.com/showroom/glanza",
+      "cvs_score": 40.0,
+      "cvs_category": "steady",
+      "threat_level": "medium",
+      "what_changed": "- Toyota Glanza changed 4 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "aggressive",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "- Toyota Glanza",
+          "page_type": "homepage",
+          "url": "https://www.toyotabharat.com/showroom/glanza/",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        },
+        {
+          "competitor_name": "- Toyota Glanza",
+          "page_type": "pricing",
+          "url": "https://www.toyotabharat.com/showroom/glanza/pricing",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        },
+        {
+          "competitor_name": "- Toyota Glanza",
+          "page_type": "features",
+          "url": "https://www.toyotabharat.com/showroom/glanza/features",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        },
+        {
+          "competitor_name": "- Toyota Glanza",
+          "page_type": "about",
+          "url": "https://www.toyotabharat.com/showroom/glanza/about",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "Hyundai i20",
+      "website": "https://www.hyundai.com/in/en/find-a-car/i20/highlights",
+      "cvs_score": 17.5,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "Hyundai i20 changed 1 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "Hyundai i20",
+          "page_type": "homepage",
+          "url": "https://www.hyundai.com/in/en/find-a-car/i20/highlights/",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Honda Amaze",
+      "website": "https://www.hondacarindia.com/honda-amaze",
+      "cvs_score": 17.5,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Honda Amaze changed 1 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "- Honda Amaze",
+          "page_type": "homepage",
+          "url": "https://www.hondacarindia.com/honda-amaze/",
+          "diff_summary": "New page content detected for the first time.",
+          "change_pct": 100.0,
+          "change_magnitude": "major",
+          "change_types": [
+            "new_page",
+            "copy"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Tata Altroz",
+      "website": "https://cars.tatamotors.com/cars/altroz",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Tata Altroz changed 0 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    }
+  ],
+  "digest": {
+    "generated_at": "2026-03-28T15:47:33.778697",
+    "own_brand": "Maruti Suzuki Swift",
+    "executive_summary": [
+      "0 competitor(s) are in Active+ velocity mode.",
+      "Top actions prioritize messaging gaps and fast-response landing pages."
+    ],
+    "competitor_analyses": [
+      {
+        "competitor_name": "- Maruti Baleno",
+        "website": "https://www.nexaexperience.com/baleno",
+        "cvs_score": 40.0,
+        "cvs_category": "steady",
+        "threat_level": "medium",
+        "what_changed": "- Maruti Baleno changed 4 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "aggressive",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "- Maruti Baleno",
+            "page_type": "homepage",
+            "url": "https://www.nexaexperience.com/baleno/",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          },
+          {
+            "competitor_name": "- Maruti Baleno",
+            "page_type": "pricing",
+            "url": "https://www.nexaexperience.com/baleno/pricing",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          },
+          {
+            "competitor_name": "- Maruti Baleno",
+            "page_type": "features",
+            "url": "https://www.nexaexperience.com/baleno/features",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          },
+          {
+            "competitor_name": "- Maruti Baleno",
+            "page_type": "about",
+            "url": "https://www.nexaexperience.com/baleno/about",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Toyota Glanza",
+        "website": "https://www.toyotabharat.com/showroom/glanza",
+        "cvs_score": 40.0,
+        "cvs_category": "steady",
+        "threat_level": "medium",
+        "what_changed": "- Toyota Glanza changed 4 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "aggressive",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "- Toyota Glanza",
+            "page_type": "homepage",
+            "url": "https://www.toyotabharat.com/showroom/glanza/",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          },
+          {
+            "competitor_name": "- Toyota Glanza",
+            "page_type": "pricing",
+            "url": "https://www.toyotabharat.com/showroom/glanza/pricing",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          },
+          {
+            "competitor_name": "- Toyota Glanza",
+            "page_type": "features",
+            "url": "https://www.toyotabharat.com/showroom/glanza/features",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          },
+          {
+            "competitor_name": "- Toyota Glanza",
+            "page_type": "about",
+            "url": "https://www.toyotabharat.com/showroom/glanza/about",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "Hyundai i20",
+        "website": "https://www.hyundai.com/in/en/find-a-car/i20/highlights",
+        "cvs_score": 17.5,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "Hyundai i20 changed 1 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "Hyundai i20",
+            "page_type": "homepage",
+            "url": "https://www.hyundai.com/in/en/find-a-car/i20/highlights/",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Honda Amaze",
+        "website": "https://www.hondacarindia.com/honda-amaze",
+        "cvs_score": 17.5,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Honda Amaze changed 1 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "- Honda Amaze",
+            "page_type": "homepage",
+            "url": "https://www.hondacarindia.com/honda-amaze/",
+            "diff_summary": "New page content detected for the first time.",
+            "change_pct": 100.0,
+            "change_magnitude": "major",
+            "change_types": [
+              "new_page",
+              "copy"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Tata Altroz",
+        "website": "https://cars.tatamotors.com/cars/altroz",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Tata Altroz changed 0 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      }
+    ]
+  },
+  "runtime_seconds": 86.15
+}

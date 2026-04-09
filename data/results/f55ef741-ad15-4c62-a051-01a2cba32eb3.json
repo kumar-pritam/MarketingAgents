@@ -1,0 +1,182 @@
+{
+  "context": {
+    "brand_name": "PolicyShield",
+    "category": "Cyber Insurance",
+    "industry": "Insurance",
+    "region": "India",
+    "competitors": [
+      "- `HDFC ERGO`",
+      "- `ICICI Lombard`",
+      "- `Bajaj Allianz`",
+      "- `Tata AIG`",
+      "- `Digit Insurance`"
+    ],
+    "keywords": [
+      "- `SME cyber insurance`",
+      "- `ransomware coverage`",
+      "- `data breach liability`",
+      "- `incident response support`",
+      "- `policy claim settlement`",
+      "- `premium affordability`",
+      "- `compliance coverage`"
+    ],
+    "audit_id": "f55ef741-ad15-4c62-a051-01a2cba32eb3",
+    "created_at": "2026-03-28T11:52:22.463095+00:00"
+  },
+  "queries": [
+    {
+      "query_id": "q_001",
+      "text": "Best Cyber Insurance for Cyber Insurance",
+      "type": "informational",
+      "target_topic": "Cyber Insurance"
+    },
+    {
+      "query_id": "q_002",
+      "text": "PolicyShield or - `ICICI Lombard`: which is better for - `SME cyber insurance`",
+      "type": "comparative",
+      "target_topic": "- `SME cyber insurance`"
+    },
+    {
+      "query_id": "q_003",
+      "text": "What are the pros and cons of leading Cyber Insurance options for - `ransomware coverage`",
+      "type": "evaluative",
+      "target_topic": "- `ransomware coverage`"
+    },
+    {
+      "query_id": "q_004",
+      "text": "Top Cyber Insurance providers in India for - `data breach liability`",
+      "type": "ranking",
+      "target_topic": "- `data breach liability`"
+    },
+    {
+      "query_id": "q_005",
+      "text": "Which Cyber Insurance brands are most referenced by analysts for - `incident response support`",
+      "type": "authority",
+      "target_topic": "- `incident response support`"
+    }
+  ],
+  "parsed_results": [
+    {
+      "query_id": "q_001",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "mixed",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_002",
+      "brand_mentioned": true,
+      "brand_position": "first",
+      "brand_sentiment": "mixed",
+      "brand_context": "compared",
+      "competitors_mentioned": [],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_003",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "mixed",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_004",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "mixed",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_005",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "positive",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    }
+  ],
+  "score": {
+    "audit_id": "f55ef741-ad15-4c62-a051-01a2cba32eb3",
+    "brand_name": "PolicyShield",
+    "ai_sov_pct": 20.0,
+    "visibility_score": 29.6,
+    "competitor_scores": {
+      "- `HDFC ERGO`": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- `ICICI Lombard`": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- `Bajaj Allianz`": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- `Tata AIG`": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- `Digit Insurance`": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      }
+    },
+    "gaps": [],
+    "total_queries": 5,
+    "tokens_used": 5973,
+    "runtime_seconds": 218.31
+  },
+  "recommendations": [
+    {
+      "topic": "Cyber Insurance trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- `HDFC ERGO`"
+    },
+    {
+      "topic": "Cyber Insurance trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- `HDFC ERGO`"
+    },
+    {
+      "topic": "Cyber Insurance trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- `HDFC ERGO`"
+    },
+    {
+      "topic": "Cyber Insurance trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- `HDFC ERGO`"
+    },
+    {
+      "topic": "Cyber Insurance trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- `HDFC ERGO`"
+    }
+  ],
+  "runner_stats": {
+    "total_tokens": 5973,
+    "completed": 5,
+    "failed": 0,
+    "requests_used_today": 10,
+    "warnings": []
+  },
+  "gsc_insights": []
+}

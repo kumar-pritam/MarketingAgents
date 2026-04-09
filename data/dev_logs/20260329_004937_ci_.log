@@ -1,0 +1,160 @@
+# Development Trace Log
+# agent=ci
+# context_id=
+# started=20260329_004937
+
+[00:49:37] [INFO] CI runtime started.
+[00:49:37] [INFO] CI run initiated.
+[00:49:37] [INFO] CI_RUN_START run_id=c8f41517-a80e-461c-b399-3a5f555b0ffe brand= competitors=5 use_hn=True use_meta=False
+[00:49:37] [INFO] CI progress 1/5: Scanning Hyundai i20 website
+[00:49:37] [INFO] CI_SCRAPE_START competitor=Hyundai i20 website=https://www.hyundai.com/in/en/find-a-car/i20/highlights
+[00:49:37] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/ attempt=1
+[00:49:38] [INFO] CI_SCRAPE_SUCCESS url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/ chars=11349
+[00:49:38] [INFO] CI_DIFF competitor=Hyundai i20 page_type=homepage change_pct=0.0 magnitude=none types=['pricing', 'structure']
+[00:49:40] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/pricing attempt=1
+[00:49:41] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/pricing status=404
+[00:49:41] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/pricing attempt=2
+[00:49:41] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/pricing status=404
+[00:49:41] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/pricing attempt=3
+[00:49:42] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/pricing status=404
+[00:49:42] [INFO] CI_SCRAPE_SKIPPED competitor=Hyundai i20 page_type=pricing reason=empty
+[00:49:42] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/features attempt=1
+[00:49:42] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/features status=404
+[00:49:42] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/features attempt=2
+[00:49:42] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/features status=404
+[00:49:42] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/features attempt=3
+[00:49:43] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/features status=404
+[00:49:43] [INFO] CI_SCRAPE_SKIPPED competitor=Hyundai i20 page_type=features reason=empty
+[00:49:43] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/about attempt=1
+[00:49:43] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/about status=404
+[00:49:43] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/about attempt=2
+[00:49:43] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/about status=404
+[00:49:43] [INFO] CI_SCRAPE_REQUEST url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/about attempt=3
+[00:49:44] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hyundai.com/in/en/find-a-car/i20/highlights/about status=404
+[00:49:44] [INFO] CI_SCRAPE_SKIPPED competitor=Hyundai i20 page_type=about reason=empty
+[00:49:44] [INFO] CI_SCRAPE_DONE competitor=Hyundai i20 pages_processed=1
+[00:49:44] [INFO] CI_WEBSITE_SCORES competitor=Hyundai i20 website_change_score=0.0 new_page_score=0
+[00:49:46] [INFO] CI_HN_SIGNALS competitor=Hyundai i20 mentions=0 hn_score=0.0
+[00:49:46] [INFO] CI_AD_SIGNALS competitor=Hyundai i20 ads=0 ad_volume_score=0 ad_theme_score=0
+[00:49:46] [INFO] CI_ANALYST_LLM_CALL model=meta-llama/llama-3.3-70b-instruct:free system_prompt=You are a senior competitive intelligence analyst. Analyze this competitor signal pack relative to the user's brand and return compact JSON with keys: what_changed, strategic_interpretation, speed_of_movement, threat_level, recommended_response, key_signals. user_prompt={"own_brand": {"name": "", "website": "", "positioning": ""}, "competitor_signals": {"competitor_name": "Hyundai i20", "web_diffs": [{"competitor_name": "Hyundai i20", "page_type": "homepage", "url": "https://www.hyundai.com/in/en/find-a-car/i20/highlights/", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "structure"]}], "hn_signals": {"source": "hacker_news", "mentions_count": 0, "top_discussions": [], "sentiment_distribution": {"positive": 0, "negative": 0, "neutral": 0}}, "meta_ads": {"enabled": false, "total_active_ads": 0, "new_ads_since_last_run": 0, "top_ad_themes": [], "dominant_cta": "", "ads": []}, "cvs_score": 0.0, "cvs_category": "dormant"}}
+[00:49:52] [INFO] CI_ANALYST_LLM_FAILED error=Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BFD1Dn6gr7qVMNaCevba8ovzhX'}
+[00:49:52] [INFO] CI_ANALYST_FALLBACK_USED reason=llm_parse_or_call_failure
+[00:49:52] [INFO] CI_ANALYSIS_RESULT competitor=Hyundai i20 cvs_score=0.0 cvs_category=dormant threat=low
+[00:49:52] [INFO] CI progress 2/5: Scanning Tata Altroz website
+[00:49:52] [INFO] CI_SCRAPE_START competitor=Tata Altroz website=https://cars.tatamotors.com/cars/altroz
+[00:49:52] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/ attempt=1
+[00:49:55] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/ status=404
+[00:49:55] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/ attempt=2
+[00:49:55] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/ status=404
+[00:49:55] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/ attempt=3
+[00:49:55] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/ status=404
+[00:49:55] [INFO] CI_SCRAPE_SKIPPED competitor=Tata Altroz page_type=homepage reason=empty
+[00:49:55] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/pricing attempt=1
+[00:49:55] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/pricing status=404
+[00:49:55] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/pricing attempt=2
+[00:49:55] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/pricing status=404
+[00:49:55] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/pricing attempt=3
+[00:49:55] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/pricing status=404
+[00:49:55] [INFO] CI_SCRAPE_SKIPPED competitor=Tata Altroz page_type=pricing reason=empty
+[00:49:55] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/features attempt=1
+[00:49:56] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/features status=404
+[00:49:56] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/features attempt=2
+[00:49:56] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/features status=404
+[00:49:56] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/features attempt=3
+[00:49:56] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/features status=404
+[00:49:56] [INFO] CI_SCRAPE_SKIPPED competitor=Tata Altroz page_type=features reason=empty
+[00:49:56] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/about attempt=1
+[00:49:56] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/about status=404
+[00:49:56] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/about attempt=2
+[00:49:56] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/about status=404
+[00:49:56] [INFO] CI_SCRAPE_REQUEST url=https://cars.tatamotors.com/cars/altroz/about attempt=3
+[00:49:56] [INFO] CI_SCRAPE_HTTP_ERROR url=https://cars.tatamotors.com/cars/altroz/about status=404
+[00:49:56] [INFO] CI_SCRAPE_SKIPPED competitor=Tata Altroz page_type=about reason=empty
+[00:49:56] [INFO] CI_SCRAPE_DONE competitor=Tata Altroz pages_processed=0
+[00:49:56] [INFO] CI_WEBSITE_SCORES competitor=Tata Altroz website_change_score=0.0 new_page_score=0
+[00:49:57] [INFO] CI_HN_SIGNALS competitor=Tata Altroz mentions=0 hn_score=0.0
+[00:49:57] [INFO] CI_AD_SIGNALS competitor=Tata Altroz ads=0 ad_volume_score=0 ad_theme_score=0
+[00:49:57] [INFO] CI_ANALYST_LLM_CALL model=meta-llama/llama-3.3-70b-instruct:free system_prompt=You are a senior competitive intelligence analyst. Analyze this competitor signal pack relative to the user's brand and return compact JSON with keys: what_changed, strategic_interpretation, speed_of_movement, threat_level, recommended_response, key_signals. user_prompt={"own_brand": {"name": "", "website": "", "positioning": ""}, "competitor_signals": {"competitor_name": "Tata Altroz", "web_diffs": [], "hn_signals": {"source": "hacker_news", "mentions_count": 0, "top_discussions": [], "sentiment_distribution": {"positive": 0, "negative": 0, "neutral": 0}}, "meta_ads": {"enabled": false, "total_active_ads": 0, "new_ads_since_last_run": 0, "top_ad_themes": [], "dominant_cta": "", "ads": []}, "cvs_score": 0.0, "cvs_category": "dormant"}}
+[00:50:00] [INFO] CI_ANALYST_LLM_FAILED error=Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1774725600000'}, 'provider_name': None}}, 'user_id': 'user_3BFD1Dn6gr7qVMNaCevba8ovzhX'}
+[00:50:00] [INFO] CI_ANALYST_FALLBACK_USED reason=llm_parse_or_call_failure
+[00:50:00] [INFO] CI_ANALYSIS_RESULT competitor=Tata Altroz cvs_score=0.0 cvs_category=dormant threat=low
+[00:50:00] [INFO] CI progress 3/5: Scanning Maruti Baleno website
+[00:50:00] [INFO] CI_SCRAPE_START competitor=Maruti Baleno website=https://www.nexaexperience.com/baleno
+[00:50:00] [INFO] CI_SCRAPE_REQUEST url=https://www.nexaexperience.com/baleno/ attempt=1
+[00:50:00] [INFO] CI_SCRAPE_SUCCESS url=https://www.nexaexperience.com/baleno/ chars=89502
+[00:50:01] [INFO] CI_DIFF competitor=Maruti Baleno page_type=homepage change_pct=0.0 magnitude=none types=['pricing', 'copy', 'structure']
+[00:50:03] [INFO] CI_SCRAPE_REQUEST url=https://www.nexaexperience.com/baleno/pricing attempt=1
+[00:50:03] [INFO] CI_SCRAPE_SUCCESS url=https://www.nexaexperience.com/baleno/pricing chars=89502
+[00:50:03] [INFO] CI_DIFF competitor=Maruti Baleno page_type=pricing change_pct=0.0 magnitude=none types=['pricing', 'copy', 'structure']
+[00:50:05] [INFO] CI_SCRAPE_REQUEST url=https://www.nexaexperience.com/baleno/features attempt=1
+[00:50:06] [INFO] CI_SCRAPE_SUCCESS url=https://www.nexaexperience.com/baleno/features chars=89502
+[00:50:06] [INFO] CI_DIFF competitor=Maruti Baleno page_type=features change_pct=0.0 magnitude=none types=['pricing', 'copy', 'structure']
+[00:50:08] [INFO] CI_SCRAPE_REQUEST url=https://www.nexaexperience.com/baleno/about attempt=1
+[00:50:08] [INFO] CI_SCRAPE_SUCCESS url=https://www.nexaexperience.com/baleno/about chars=89502
+[00:50:09] [INFO] CI_DIFF competitor=Maruti Baleno page_type=about change_pct=0.0 magnitude=none types=['pricing', 'copy', 'structure']
+[00:50:11] [INFO] CI_SCRAPE_DONE competitor=Maruti Baleno pages_processed=4
+[00:50:11] [INFO] CI_WEBSITE_SCORES competitor=Maruti Baleno website_change_score=0.0 new_page_score=0
+[00:50:12] [INFO] CI_HN_SIGNALS competitor=Maruti Baleno mentions=0 hn_score=0.0
+[00:50:12] [INFO] CI_AD_SIGNALS competitor=Maruti Baleno ads=0 ad_volume_score=0 ad_theme_score=0
+[00:50:12] [INFO] CI_ANALYST_LLM_CALL model=meta-llama/llama-3.3-70b-instruct:free system_prompt=You are a senior competitive intelligence analyst. Analyze this competitor signal pack relative to the user's brand and return compact JSON with keys: what_changed, strategic_interpretation, speed_of_movement, threat_level, recommended_response, key_signals. user_prompt={"own_brand": {"name": "", "website": "", "positioning": ""}, "competitor_signals": {"competitor_name": "Maruti Baleno", "web_diffs": [{"competitor_name": "Maruti Baleno", "page_type": "homepage", "url": "https://www.nexaexperience.com/baleno/", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "copy", "structure"]}, {"competitor_name": "Maruti Baleno", "page_type": "pricing", "url": "https://www.nexaexperience.com/baleno/pricing", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "copy", "structure"]}, {"competitor_name": "Maruti Baleno", "page_type": "features", "url": "https://www.nexaexperience.com/baleno/features", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "copy", "structure"]}, {"competitor_name": "Maruti Baleno", "page_type": "about", "url": "https://www.nexaexperience.com/baleno/about", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "copy", "structure"]}], "hn_signals": {"source": "hacker_news", "mentions_count": 0, "top_discussions": [], "sentiment_distribution": {"positive": 0, "negative": 0, "neutral": 0}}, "meta_ads": {"enabled": false, "total_active_ads": 0, "new_ads_since_last_run": 0, "top_ad_themes": [], "dominant_cta": "", "ads": []}, "cvs_score": 0.0, "cvs_category": "dormant"}}
+[00:50:15] [INFO] CI_ANALYST_LLM_FAILED error=Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BFD1Dn6gr7qVMNaCevba8ovzhX'}
+[00:50:15] [INFO] CI_ANALYST_FALLBACK_USED reason=llm_parse_or_call_failure
+[00:50:15] [INFO] CI_ANALYSIS_RESULT competitor=Maruti Baleno cvs_score=0.0 cvs_category=dormant threat=low
+[00:50:15] [INFO] CI progress 4/5: Scanning Toyota Glanza website
+[00:50:15] [INFO] CI_SCRAPE_START competitor=Toyota Glanza website=https://www.toyotabharat.com/showroom/glanza
+[00:50:15] [INFO] CI_SCRAPE_REQUEST url=https://www.toyotabharat.com/showroom/glanza/ attempt=1
+[00:50:16] [INFO] CI_SCRAPE_SUCCESS url=https://www.toyotabharat.com/showroom/glanza/ chars=41020
+[00:50:16] [INFO] CI_DIFF competitor=Toyota Glanza page_type=homepage change_pct=0.0 magnitude=none types=['pricing', 'structure']
+[00:50:18] [INFO] CI_SCRAPE_REQUEST url=https://www.toyotabharat.com/showroom/glanza/pricing attempt=1
+[00:50:18] [INFO] CI_SCRAPE_SUCCESS url=https://www.toyotabharat.com/showroom/glanza/pricing chars=89
+[00:50:18] [INFO] CI_DIFF competitor=Toyota Glanza page_type=pricing change_pct=0.0 magnitude=none types=[]
+[00:50:20] [INFO] CI_SCRAPE_REQUEST url=https://www.toyotabharat.com/showroom/glanza/features attempt=1
+[00:50:21] [INFO] CI_SCRAPE_SUCCESS url=https://www.toyotabharat.com/showroom/glanza/features chars=89
+[00:50:21] [INFO] CI_DIFF competitor=Toyota Glanza page_type=features change_pct=0.0 magnitude=none types=[]
+[00:50:23] [INFO] CI_SCRAPE_REQUEST url=https://www.toyotabharat.com/showroom/glanza/about attempt=1
+[00:50:23] [INFO] CI_SCRAPE_SUCCESS url=https://www.toyotabharat.com/showroom/glanza/about chars=89
+[00:50:23] [INFO] CI_DIFF competitor=Toyota Glanza page_type=about change_pct=0.0 magnitude=none types=[]
+[00:50:25] [INFO] CI_SCRAPE_DONE competitor=Toyota Glanza pages_processed=4
+[00:50:25] [INFO] CI_WEBSITE_SCORES competitor=Toyota Glanza website_change_score=0.0 new_page_score=0
+[00:50:26] [INFO] CI_HN_SIGNALS competitor=Toyota Glanza mentions=0 hn_score=0.0
+[00:50:26] [INFO] CI_AD_SIGNALS competitor=Toyota Glanza ads=0 ad_volume_score=0 ad_theme_score=0
+[00:50:26] [INFO] CI_ANALYST_LLM_CALL model=meta-llama/llama-3.3-70b-instruct:free system_prompt=You are a senior competitive intelligence analyst. Analyze this competitor signal pack relative to the user's brand and return compact JSON with keys: what_changed, strategic_interpretation, speed_of_movement, threat_level, recommended_response, key_signals. user_prompt={"own_brand": {"name": "", "website": "", "positioning": ""}, "competitor_signals": {"competitor_name": "Toyota Glanza", "web_diffs": [{"competitor_name": "Toyota Glanza", "page_type": "homepage", "url": "https://www.toyotabharat.com/showroom/glanza/", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "structure"]}, {"competitor_name": "Toyota Glanza", "page_type": "pricing", "url": "https://www.toyotabharat.com/showroom/glanza/pricing", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": []}, {"competitor_name": "Toyota Glanza", "page_type": "features", "url": "https://www.toyotabharat.com/showroom/glanza/features", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": []}, {"competitor_name": "Toyota Glanza", "page_type": "about", "url": "https://www.toyotabharat.com/showroom/glanza/about", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": []}], "hn_signals": {"source": "hacker_news", "mentions_count": 0, "top_discussions": [], "sentiment_distribution": {"positive": 0, "negative": 0, "neutral": 0}}, "meta_ads": {"enabled": false, "total_active_ads": 0, "new_ads_since_last_run": 0, "top_ad_themes": [], "dominant_cta": "", "ads": []}, "cvs_score": 0.0, "cvs_category": "dormant"}}
+[00:50:29] [INFO] CI_ANALYST_LLM_FAILED error=Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BFD1Dn6gr7qVMNaCevba8ovzhX'}
+[00:50:29] [INFO] CI_ANALYST_FALLBACK_USED reason=llm_parse_or_call_failure
+[00:50:29] [INFO] CI_ANALYSIS_RESULT competitor=Toyota Glanza cvs_score=0.0 cvs_category=dormant threat=low
+[00:50:29] [INFO] CI progress 5/5: Scanning Honda Amaze website
+[00:50:29] [INFO] CI_SCRAPE_START competitor=Honda Amaze website=https://www.hondacarindia.com/honda-amaze
+[00:50:29] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/ attempt=1
+[00:50:30] [INFO] CI_SCRAPE_SUCCESS url=https://www.hondacarindia.com/honda-amaze/ chars=6160
+[00:50:30] [INFO] CI_DIFF competitor=Honda Amaze page_type=homepage change_pct=0.0 magnitude=none types=['pricing', 'structure']
+[00:50:32] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/pricing attempt=1
+[00:50:32] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/pricing status=404
+[00:50:32] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/pricing attempt=2
+[00:50:32] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/pricing status=404
+[00:50:32] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/pricing attempt=3
+[00:50:32] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/pricing status=404
+[00:50:32] [INFO] CI_SCRAPE_SKIPPED competitor=Honda Amaze page_type=pricing reason=empty
+[00:50:32] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/features attempt=1
+[00:50:32] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/features status=404
+[00:50:32] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/features attempt=2
+[00:50:32] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/features status=404
+[00:50:32] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/features attempt=3
+[00:50:33] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/features status=404
+[00:50:33] [INFO] CI_SCRAPE_SKIPPED competitor=Honda Amaze page_type=features reason=empty
+[00:50:33] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/about attempt=1
+[00:50:33] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/about status=404
+[00:50:33] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/about attempt=2
+[00:50:33] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/about status=404
+[00:50:33] [INFO] CI_SCRAPE_REQUEST url=https://www.hondacarindia.com/honda-amaze/about attempt=3
+[00:50:33] [INFO] CI_SCRAPE_HTTP_ERROR url=https://www.hondacarindia.com/honda-amaze/about status=404
+[00:50:33] [INFO] CI_SCRAPE_SKIPPED competitor=Honda Amaze page_type=about reason=empty
+[00:50:33] [INFO] CI_SCRAPE_DONE competitor=Honda Amaze pages_processed=1
+[00:50:33] [INFO] CI_WEBSITE_SCORES competitor=Honda Amaze website_change_score=0.0 new_page_score=0
+[00:50:34] [INFO] CI_HN_SIGNALS competitor=Honda Amaze mentions=0 hn_score=0.0
+[00:50:34] [INFO] CI_AD_SIGNALS competitor=Honda Amaze ads=0 ad_volume_score=0 ad_theme_score=0
+[00:50:34] [INFO] CI_ANALYST_LLM_CALL model=meta-llama/llama-3.3-70b-instruct:free system_prompt=You are a senior competitive intelligence analyst. Analyze this competitor signal pack relative to the user's brand and return compact JSON with keys: what_changed, strategic_interpretation, speed_of_movement, threat_level, recommended_response, key_signals. user_prompt={"own_brand": {"name": "", "website": "", "positioning": ""}, "competitor_signals": {"competitor_name": "Honda Amaze", "web_diffs": [{"competitor_name": "Honda Amaze", "page_type": "homepage", "url": "https://www.hondacarindia.com/honda-amaze/", "diff_summary": "Content delta is 0.0% (none).", "change_pct": 0.0, "change_magnitude": "none", "change_types": ["pricing", "structure"]}], "hn_signals": {"source": "hacker_news", "mentions_count": 0, "top_discussions": [], "sentiment_distribution": {"positive": 0, "negative": 0, "neutral": 0}}, "meta_ads": {"enabled": false, "total_active_ads": 0, "new_ads_since_last_run": 0, "top_ad_themes": [], "dominant_cta": "", "ads": []}, "cvs_score": 0.0, "cvs_category": "dormant"}}
+[00:50:37] [INFO] CI_ANALYST_LLM_FAILED error=Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1774725660000'}, 'provider_name': None}}, 'user_id': 'user_3BFD1Dn6gr7qVMNaCevba8ovzhX'}
+[00:50:37] [INFO] CI_ANALYST_FALLBACK_USED reason=llm_parse_or_call_failure
+[00:50:37] [INFO] CI_ANALYSIS_RESULT competitor=Honda Amaze cvs_score=0.0 cvs_category=dormant threat=low
+[00:50:37] [INFO] CI_RUN_END run_id=c8f41517-a80e-461c-b399-3a5f555b0ffe competitors=5 actions=5 runtime=59.47
+[00:50:37] [INFO] CI run complete: competitors=5, runtime=59.47s, digest_items=5.

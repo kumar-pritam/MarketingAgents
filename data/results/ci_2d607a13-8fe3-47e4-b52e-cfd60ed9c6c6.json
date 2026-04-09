@@ -1,0 +1,558 @@
+{
+  "run_id": "2d607a13-8fe3-47e4-b52e-cfd60ed9c6c6",
+  "own_brand": {
+    "name": "Dettol",
+    "website": "https://www.dettol.co.in",
+    "positioning": "Family-safe moisturizing bathing soap for daily use\n- Cadence: Weekly"
+  },
+  "competitors": [
+    {
+      "competitor_name": "- Cinthol",
+      "website": "https://www.cinthol.com",
+      "cvs_score": 15.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Cinthol changed 0 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 9,
+        "top_discussions": [
+          {
+            "title": "Why so many control rooms were seafoam green (2025)",
+            "url": "https://bethmathews.substack.com/p/why-so-many-control-rooms-were-seafoam",
+            "points": 1015,
+            "date": "2026-03-25T15:46:29Z"
+          },
+          {
+            "title": "Do Not Turn Child Protection into Internet Access Control",
+            "url": "https://news.dyne.org/child-protection-is-not-access-control/",
+            "points": 837,
+            "date": "2026-03-21T20:32:20Z"
+          },
+          {
+            "title": "End of \"Chat Control\": EU parliament stops mass surveillance",
+            "url": "https://www.patrick-breyer.de/en/end-of-chat-control-eu-parliament-stops-mass-surveillance-in-voting-thriller-paving-the-way-for-genuine-child-protection/",
+            "points": 669,
+            "date": "2026-03-26T12:24:36Z"
+          },
+          {
+            "title": "The future of version control",
+            "url": "https://bramcohen.com/p/manyana",
+            "points": 666,
+            "date": "2026-03-22T15:16:28Z"
+          },
+          {
+            "title": "European Parliament decided that Chat Control 1.0 must stop",
+            "url": "https://bsky.app/profile/tuta.com/post/3mhxkfowv322c",
+            "points": 558,
+            "date": "2026-03-26T12:30:59Z"
+          }
+        ],
+        "sentiment_distribution": {
+          "positive": 2,
+          "negative": 1,
+          "neutral": 6
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Lux",
+      "website": "https://www.lux.com/in",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Lux changed 0 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Dove",
+      "website": "https://www.dove.com/in",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Dove changed 0 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Pears",
+      "website": "https://www.pears.com",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Pears changed 1 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "- Pears",
+          "page_type": "homepage",
+          "url": "https://www.pears.com/",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "structure"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "- Santoor",
+      "website": "https://www.santoor.com",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "- Santoor changed 4 monitored pages this cycle.",
+      "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+      "speed_of_movement": "moderate",
+      "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+      "key_signals": [
+        "Website copy updates detected",
+        "Ad messaging signal monitored",
+        "Public signal scan completed"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "- Santoor",
+          "page_type": "homepage",
+          "url": "https://www.santoor.com/",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        },
+        {
+          "competitor_name": "- Santoor",
+          "page_type": "pricing",
+          "url": "https://www.santoor.com/pricing",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        },
+        {
+          "competitor_name": "- Santoor",
+          "page_type": "features",
+          "url": "https://www.santoor.com/features",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        },
+        {
+          "competitor_name": "- Santoor",
+          "page_type": "about",
+          "url": "https://www.santoor.com/about",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    }
+  ],
+  "digest": {
+    "generated_at": "2026-03-28T13:02:11.612993",
+    "own_brand": "Dettol",
+    "executive_summary": [
+      "0 competitor(s) are in Active+ velocity mode.",
+      "Top actions prioritize messaging gaps and fast-response landing pages."
+    ],
+    "competitor_analyses": [
+      {
+        "competitor_name": "- Cinthol",
+        "website": "https://www.cinthol.com",
+        "cvs_score": 15.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Cinthol changed 0 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 9,
+          "top_discussions": [
+            {
+              "title": "Why so many control rooms were seafoam green (2025)",
+              "url": "https://bethmathews.substack.com/p/why-so-many-control-rooms-were-seafoam",
+              "points": 1015,
+              "date": "2026-03-25T15:46:29Z"
+            },
+            {
+              "title": "Do Not Turn Child Protection into Internet Access Control",
+              "url": "https://news.dyne.org/child-protection-is-not-access-control/",
+              "points": 837,
+              "date": "2026-03-21T20:32:20Z"
+            },
+            {
+              "title": "End of \"Chat Control\": EU parliament stops mass surveillance",
+              "url": "https://www.patrick-breyer.de/en/end-of-chat-control-eu-parliament-stops-mass-surveillance-in-voting-thriller-paving-the-way-for-genuine-child-protection/",
+              "points": 669,
+              "date": "2026-03-26T12:24:36Z"
+            },
+            {
+              "title": "The future of version control",
+              "url": "https://bramcohen.com/p/manyana",
+              "points": 666,
+              "date": "2026-03-22T15:16:28Z"
+            },
+            {
+              "title": "European Parliament decided that Chat Control 1.0 must stop",
+              "url": "https://bsky.app/profile/tuta.com/post/3mhxkfowv322c",
+              "points": 558,
+              "date": "2026-03-26T12:30:59Z"
+            }
+          ],
+          "sentiment_distribution": {
+            "positive": 2,
+            "negative": 1,
+            "neutral": 6
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Lux",
+        "website": "https://www.lux.com/in",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Lux changed 0 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Dove",
+        "website": "https://www.dove.com/in",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Dove changed 0 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Pears",
+        "website": "https://www.pears.com",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Pears changed 1 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "- Pears",
+            "page_type": "homepage",
+            "url": "https://www.pears.com/",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "structure"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "- Santoor",
+        "website": "https://www.santoor.com",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "- Santoor changed 4 monitored pages this cycle.",
+        "strategic_interpretation": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy.",
+        "speed_of_movement": "moderate",
+        "recommended_response": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "key_signals": [
+          "Website copy updates detected",
+          "Ad messaging signal monitored",
+          "Public signal scan completed"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "- Santoor",
+            "page_type": "homepage",
+            "url": "https://www.santoor.com/",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          },
+          {
+            "competitor_name": "- Santoor",
+            "page_type": "pricing",
+            "url": "https://www.santoor.com/pricing",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          },
+          {
+            "competitor_name": "- Santoor",
+            "page_type": "features",
+            "url": "https://www.santoor.com/features",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          },
+          {
+            "competitor_name": "- Santoor",
+            "page_type": "about",
+            "url": "https://www.santoor.com/about",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      },
+      {
+        "action": "Launch a counter-positioning page with clearer differentiation and proof points.",
+        "urgency": "this_week",
+        "rationale": "Signals a messaging refresh with stronger emphasis on conversion-oriented copy."
+      }
+    ]
+  },
+  "runtime_seconds": 210.3
+}

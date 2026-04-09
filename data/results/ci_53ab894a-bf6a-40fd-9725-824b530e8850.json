@@ -1,0 +1,636 @@
+{
+  "run_id": "53ab894a-bf6a-40fd-9725-824b530e8850",
+  "own_brand": {
+    "name": "",
+    "website": "",
+    "positioning": ""
+  },
+  "competitors": [
+    {
+      "competitor_name": "Hyundai i20",
+      "website": "https://www.hyundai.com/in/en/find-a-car/i20/highlights",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "No substantive changes detected; homepage content delta is 0% despite listed change types (pricing, structure).",
+      "strategic_interpretation": "Hyundai i20 appears dormant with no active marketing, PR, or product updates in the monitored channels.",
+      "speed_of_movement": "Stagnant / low velocity",
+      "recommended_response": "Continue routine monitoring; no immediate tactical response required. Re\u2011evaluate if any signals emerge (e.g., ad launches, news mentions, or site updates).",
+      "key_signals": [
+        "Web diff: 0% change, change_types: pricing, structure",
+        "Hacker News mentions: 0",
+        "Meta Ads: disabled, 0 active ads",
+        "CVS score: 0.0 (dormant category)"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "Hyundai i20",
+          "page_type": "homepage",
+          "url": "https://www.hyundai.com/in/en/find-a-car/i20/highlights/",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "structure"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "Tata Altroz",
+      "website": "https://cars.tatamotors.com/cars/altroz",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "Nodetectable changes in web presence, advertising, or community discussion for Tata Altroz.",
+      "strategic_interpretation": "Competitor appears dormant; minimal competitive pressure at present.",
+      "speed_of_movement": "none",
+      "recommended_response": "Continue routine monitoring; focus resources on own initiatives rather than reactive measures.",
+      "key_signals": [
+        "web_diffs: []",
+        "hn_signals: mentions_count=0",
+        "meta_ads: enabled=false, total_active_ads=0",
+        "cvs_score: 0.0 (dormant)"
+      ],
+      "web_diffs": [],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "Maruti Baleno",
+      "website": "https://www.nexaexperience.com/baleno",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "No detectable changes across homepage, pricing, features, or about pages; no Hacker News mentions; no active Meta ads; CVS score remains at 0.0 with a dormant category.",
+      "strategic_interpretation": "Maruti Baleno is currently inactive in the monitored channels, suggesting a hold on marketing updates or a shift of focus elsewhere. The brand is maintaining the status quo rather than launching new initiatives.",
+      "speed_of_movement": "none",
+      "recommended_response": "Continue with the existing strategy while setting up a light monitoring cadence (e.g., weekly checks) to catch any future activity. If the dormancy persists, consider testing opportunistic messaging or promotional campaigns to capture any unattended market share.",
+      "key_signals": [
+        "Web diffs: 0% change on homepage, pricing, features, about pages",
+        "Hacker News mentions: 0",
+        "Meta Ads: disabled, 0 active ads",
+        "CVS score: 0.0 (dormant category)"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "Maruti Baleno",
+          "page_type": "homepage",
+          "url": "https://www.nexaexperience.com/baleno/",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "copy",
+            "structure"
+          ]
+        },
+        {
+          "competitor_name": "Maruti Baleno",
+          "page_type": "pricing",
+          "url": "https://www.nexaexperience.com/baleno/pricing",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "copy",
+            "structure"
+          ]
+        },
+        {
+          "competitor_name": "Maruti Baleno",
+          "page_type": "features",
+          "url": "https://www.nexaexperience.com/baleno/features",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "copy",
+            "structure"
+          ]
+        },
+        {
+          "competitor_name": "Maruti Baleno",
+          "page_type": "about",
+          "url": "https://www.nexaexperience.com/baleno/about",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "copy",
+            "structure"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "Toyota Glanza",
+      "website": "https://www.toyotabharat.com/showroom/glanza",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "No detectable changes across homepage, pricing, features, or about pages; zero Hacker News mentions; no active Meta ads; CVS score remains 0.0 (dormant).",
+      "strategic_interpretation": "Toyota Glanza appears to be maintaining its current market stance with no recent updates to messaging, pricing, or feature highlights, indicating a static competitive posture.",
+      "speed_of_movement": "none",
+      "recommended_response": "Continue routine monitoring; prioritize own brand initiatives and customer engagement rather than reactive moves against this competitor.",
+      "key_signals": [],
+      "web_diffs": [
+        {
+          "competitor_name": "Toyota Glanza",
+          "page_type": "homepage",
+          "url": "https://www.toyotabharat.com/showroom/glanza/",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "structure"
+          ]
+        },
+        {
+          "competitor_name": "Toyota Glanza",
+          "page_type": "pricing",
+          "url": "https://www.toyotabharat.com/showroom/glanza/pricing",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        },
+        {
+          "competitor_name": "Toyota Glanza",
+          "page_type": "features",
+          "url": "https://www.toyotabharat.com/showroom/glanza/features",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        },
+        {
+          "competitor_name": "Toyota Glanza",
+          "page_type": "about",
+          "url": "https://www.toyotabharat.com/showroom/glanza/about",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": []
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    },
+    {
+      "competitor_name": "Honda Amaze",
+      "website": "https://www.hondacarindia.com/honda-amaze",
+      "cvs_score": 0.0,
+      "cvs_category": "dormant",
+      "threat_level": "low",
+      "what_changed": "Honda Amaze's homepage shows no substantive content change (0.0% delta), though the diff flags potential pricing and structure adjustments.",
+      "strategic_interpretation": "The competitor is currently dormant with minimal online activity\u2014no Hacker News discussion, no active Meta ads, and a CVS score of 0.0\u2014indicating low market push or promotional effort.",
+      "speed_of_movement": "Slow / stagnant",
+      "recommended_response": "Continue routine monitoring; maintain current brand and marketing focus. No immediate tactical response required unless activity spikes.",
+      "key_signals": [
+        "Web diff: pricing/structure flagged despite 0.0% content change",
+        "Hacker News: 0 mentions, no discussions",
+        "Meta Ads: disabled, 0 active ads",
+        "CVS Score: 0.0 (dormant category)"
+      ],
+      "web_diffs": [
+        {
+          "competitor_name": "Honda Amaze",
+          "page_type": "homepage",
+          "url": "https://www.hondacarindia.com/honda-amaze/",
+          "diff_summary": "Content delta is 0.0% (none).",
+          "change_pct": 0.0,
+          "change_magnitude": "none",
+          "change_types": [
+            "pricing",
+            "structure"
+          ]
+        }
+      ],
+      "hn_signals": {
+        "source": "hacker_news",
+        "mentions_count": 0,
+        "top_discussions": [],
+        "sentiment_distribution": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 0
+        }
+      },
+      "meta_ads": {
+        "enabled": false,
+        "total_active_ads": 0,
+        "new_ads_since_last_run": 0,
+        "top_ad_themes": [],
+        "dominant_cta": "",
+        "ads": []
+      }
+    }
+  ],
+  "digest": {
+    "generated_at": "2026-03-28T20:02:55.408206",
+    "own_brand": "",
+    "executive_summary": [
+      "0 competitor(s) are in Active+ velocity mode.",
+      "Top actions prioritize messaging gaps and fast-response landing pages."
+    ],
+    "competitor_analyses": [
+      {
+        "competitor_name": "Hyundai i20",
+        "website": "https://www.hyundai.com/in/en/find-a-car/i20/highlights",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "No substantive changes detected; homepage content delta is 0% despite listed change types (pricing, structure).",
+        "strategic_interpretation": "Hyundai i20 appears dormant with no active marketing, PR, or product updates in the monitored channels.",
+        "speed_of_movement": "Stagnant / low velocity",
+        "recommended_response": "Continue routine monitoring; no immediate tactical response required. Re\u2011evaluate if any signals emerge (e.g., ad launches, news mentions, or site updates).",
+        "key_signals": [
+          "Web diff: 0% change, change_types: pricing, structure",
+          "Hacker News mentions: 0",
+          "Meta Ads: disabled, 0 active ads",
+          "CVS score: 0.0 (dormant category)"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "Hyundai i20",
+            "page_type": "homepage",
+            "url": "https://www.hyundai.com/in/en/find-a-car/i20/highlights/",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "structure"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "Tata Altroz",
+        "website": "https://cars.tatamotors.com/cars/altroz",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "Nodetectable changes in web presence, advertising, or community discussion for Tata Altroz.",
+        "strategic_interpretation": "Competitor appears dormant; minimal competitive pressure at present.",
+        "speed_of_movement": "none",
+        "recommended_response": "Continue routine monitoring; focus resources on own initiatives rather than reactive measures.",
+        "key_signals": [
+          "web_diffs: []",
+          "hn_signals: mentions_count=0",
+          "meta_ads: enabled=false, total_active_ads=0",
+          "cvs_score: 0.0 (dormant)"
+        ],
+        "web_diffs": [],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "Maruti Baleno",
+        "website": "https://www.nexaexperience.com/baleno",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "No detectable changes across homepage, pricing, features, or about pages; no Hacker News mentions; no active Meta ads; CVS score remains at 0.0 with a dormant category.",
+        "strategic_interpretation": "Maruti Baleno is currently inactive in the monitored channels, suggesting a hold on marketing updates or a shift of focus elsewhere. The brand is maintaining the status quo rather than launching new initiatives.",
+        "speed_of_movement": "none",
+        "recommended_response": "Continue with the existing strategy while setting up a light monitoring cadence (e.g., weekly checks) to catch any future activity. If the dormancy persists, consider testing opportunistic messaging or promotional campaigns to capture any unattended market share.",
+        "key_signals": [
+          "Web diffs: 0% change on homepage, pricing, features, about pages",
+          "Hacker News mentions: 0",
+          "Meta Ads: disabled, 0 active ads",
+          "CVS score: 0.0 (dormant category)"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "Maruti Baleno",
+            "page_type": "homepage",
+            "url": "https://www.nexaexperience.com/baleno/",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "copy",
+              "structure"
+            ]
+          },
+          {
+            "competitor_name": "Maruti Baleno",
+            "page_type": "pricing",
+            "url": "https://www.nexaexperience.com/baleno/pricing",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "copy",
+              "structure"
+            ]
+          },
+          {
+            "competitor_name": "Maruti Baleno",
+            "page_type": "features",
+            "url": "https://www.nexaexperience.com/baleno/features",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "copy",
+              "structure"
+            ]
+          },
+          {
+            "competitor_name": "Maruti Baleno",
+            "page_type": "about",
+            "url": "https://www.nexaexperience.com/baleno/about",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "copy",
+              "structure"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "Toyota Glanza",
+        "website": "https://www.toyotabharat.com/showroom/glanza",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "No detectable changes across homepage, pricing, features, or about pages; zero Hacker News mentions; no active Meta ads; CVS score remains 0.0 (dormant).",
+        "strategic_interpretation": "Toyota Glanza appears to be maintaining its current market stance with no recent updates to messaging, pricing, or feature highlights, indicating a static competitive posture.",
+        "speed_of_movement": "none",
+        "recommended_response": "Continue routine monitoring; prioritize own brand initiatives and customer engagement rather than reactive moves against this competitor.",
+        "key_signals": [],
+        "web_diffs": [
+          {
+            "competitor_name": "Toyota Glanza",
+            "page_type": "homepage",
+            "url": "https://www.toyotabharat.com/showroom/glanza/",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "structure"
+            ]
+          },
+          {
+            "competitor_name": "Toyota Glanza",
+            "page_type": "pricing",
+            "url": "https://www.toyotabharat.com/showroom/glanza/pricing",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          },
+          {
+            "competitor_name": "Toyota Glanza",
+            "page_type": "features",
+            "url": "https://www.toyotabharat.com/showroom/glanza/features",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          },
+          {
+            "competitor_name": "Toyota Glanza",
+            "page_type": "about",
+            "url": "https://www.toyotabharat.com/showroom/glanza/about",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": []
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      },
+      {
+        "competitor_name": "Honda Amaze",
+        "website": "https://www.hondacarindia.com/honda-amaze",
+        "cvs_score": 0.0,
+        "cvs_category": "dormant",
+        "threat_level": "low",
+        "what_changed": "Honda Amaze's homepage shows no substantive content change (0.0% delta), though the diff flags potential pricing and structure adjustments.",
+        "strategic_interpretation": "The competitor is currently dormant with minimal online activity\u2014no Hacker News discussion, no active Meta ads, and a CVS score of 0.0\u2014indicating low market push or promotional effort.",
+        "speed_of_movement": "Slow / stagnant",
+        "recommended_response": "Continue routine monitoring; maintain current brand and marketing focus. No immediate tactical response required unless activity spikes.",
+        "key_signals": [
+          "Web diff: pricing/structure flagged despite 0.0% content change",
+          "Hacker News: 0 mentions, no discussions",
+          "Meta Ads: disabled, 0 active ads",
+          "CVS Score: 0.0 (dormant category)"
+        ],
+        "web_diffs": [
+          {
+            "competitor_name": "Honda Amaze",
+            "page_type": "homepage",
+            "url": "https://www.hondacarindia.com/honda-amaze/",
+            "diff_summary": "Content delta is 0.0% (none).",
+            "change_pct": 0.0,
+            "change_magnitude": "none",
+            "change_types": [
+              "pricing",
+              "structure"
+            ]
+          }
+        ],
+        "hn_signals": {
+          "source": "hacker_news",
+          "mentions_count": 0,
+          "top_discussions": [],
+          "sentiment_distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          }
+        },
+        "meta_ads": {
+          "enabled": false,
+          "total_active_ads": 0,
+          "new_ads_since_last_run": 0,
+          "top_ad_themes": [],
+          "dominant_cta": "",
+          "ads": []
+        }
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Continue routine monitoring; no immediate tactical response required. Re\u2011evaluate if any signals emerge (e.g., ad launches, news mentions, or site updates) for Hyundai i20.",
+        "urgency": "this_week",
+        "rationale": "Hyundai i20 appears dormant with no active marketing, PR, or product updates in the monitored channels."
+      },
+      {
+        "action": "Continue routine monitoring; focus resources on own initiatives rather than reactive measures for Tata Altroz.",
+        "urgency": "this_week",
+        "rationale": "Competitor appears dormant; minimal competitive pressure at present."
+      },
+      {
+        "action": "Continue with the existing strategy while setting up a light monitoring cadence (e.g., weekly checks) to catch any future activity. If the dormancy persists, consider testing opportunistic messaging or promotional campaigns to capture any unattended market share for Maruti Baleno.",
+        "urgency": "this_week",
+        "rationale": "Maruti Baleno is currently inactive in the monitored channels, suggesting a hold on marketing updates or a shift of focus elsewhere. The brand is maintaining the status quo rather than launching new initiatives."
+      },
+      {
+        "action": "Continue routine monitoring; prioritize own brand initiatives and customer engagement rather than reactive moves against this competitor for Toyota Glanza.",
+        "urgency": "this_week",
+        "rationale": "Toyota Glanza appears to be maintaining its current market stance with no recent updates to messaging, pricing, or feature highlights, indicating a static competitive posture."
+      },
+      {
+        "action": "Continue routine monitoring; maintain current brand and marketing focus. No immediate tactical response required unless activity spikes for Honda Amaze.",
+        "urgency": "this_week",
+        "rationale": "The competitor is currently dormant with minimal online activity\u2014no Hacker News discussion, no active Meta ads, and a CVS score of 0.0\u2014indicating low market push or promotional effort."
+      }
+    ]
+  },
+  "runtime_seconds": 140.58
+}

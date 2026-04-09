@@ -1,0 +1,10 @@
+# OAuth credentials and tokens - never commit these
+credentials.json
+token.json
+gsc_token.json
+ga4_token.json
+*.pem
+*.key
+
+# Keep the example file
+!credentials.json.example

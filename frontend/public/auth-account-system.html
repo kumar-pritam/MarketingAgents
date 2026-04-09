@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MarketingAgents Authentication & Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --card: #ffffff;
+      --card-alt: #eceef2;
+      --line: #dde0e8;
+      --text: #0f0f1a;
+      --muted: #6b7280;
+      --accent: #4f6ef7;
+      --teal: #00b894;
+      --danger: #ff4d6d;
+      --warn: #f59e0b;
+      --shadow: 0 4px 24px rgba(15, 15, 26, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Syne", "DM Sans", sans-serif;
+      margin: 0;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .toast-container {
+      position: fixed;
+      inset: auto 1rem 1rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .toast {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      font-size: 14px;
+      min-width: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toast.success {
+      border-color: var(--teal);
+    }
+
+    .toast.error {
+      border-color: var(--danger);
+    }
+
+    .toast.info {
+      border-color: var(--accent);
+    }
+
+    .toast small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 56px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--card);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .page-header .brand-wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-family: "Syne", sans-serif;
+      color: var(--text);
+    }
+
+    .page-header nav {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .page-header-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .page-header .btn {
+      font-size: 13px;
+      padding: 10px 16px;
+    }
+
+    .page-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 56px;
+      border-top: 1px solid var(--line);
+      background: var(--card);
+      position: sticky;
+      bottom: 0;
+      z-index: 50;
+    }
+
+    .auth-layout {
+      display: grid;
+      grid-template-columns: 0.45fr 0.55fr;
+      min-height: 100vh;
+      background: var(--bg);
+    }
+
+    .auth-left-panel {
+      background: #0f0f1a;
+      color: #fff;
+      padding: 56px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .auth-left-panel h1 {
+      font-size: 32px;
+      line-height: 1.1;
+    }
+
+    .auth-left-panel p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .auth-left-panel .panel-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .auth-right-panel {
+      padding: 56px 52px;
+      background: var(--bg);
+    }
+
+    .auth-right-panel > .auth-route {
+      display: none;
+    }
+
+    .auth-right-panel > .auth-route.active {
+      display: block;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .card form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .form-group label span {
+      color: var(--danger);
+      margin-left: 2px;
+    }
+
+    input,
+    select,
+    textarea {
+      height: 48px;
+      border-radius: 10px;
+      border: 1.5px solid var(--line);
+      padding: 0 14px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+      padding-top: 10px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(79, 110, 247, 0.12);
+    }
+
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      font-family: "Syne", "DM Sans", sans-serif;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(79, 110, 247, 0.3);
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-2px);
+      background: #3d5ce8;
+    }
+
+    .btn.ghost {
+      background: #fff;
+      border: 1.5px solid var(--line);
+      color: var(--text);
+    }
+
+    .btn.secondary {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .divider span {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .checkbox-row input {
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn.google {
+      border: 1px solid rgba(15, 15, 26, 0.1);
+      background: #fff;
+    }
+
+    .helper-text {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .login-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .link-text {
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    .auth-route h2 {
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+
+    .auth-route small {
+      color: var(--muted);
+    }
+
+    .signup-steps {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .signup-step {
+      flex: 1;
+      height: 6px;
+      border-radius: 4px;
+      background: var(--line);
+    }
+
+    .signup-step.active {
+      background: var(--accent);
+    }
+
+    .step-card {
+      background: #f8fbff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 1px solid rgba(79, 110, 247, 0.2);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .inline-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .segmented-control {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .segmented-control button {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: var(--card);
+      padding: 10px 8px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .segmented-control button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .strength-meter {
+      display: flex;
+      gap: 4px;
+    }
+
+    .strength-segment {
+      flex: 1;
+      height: 6px;
+      border-radius: 4px;
+      background: var(--line);
+    }
+
+    .strength-segment.active {
+      background: var(--teal);
+    }
+
+    .requirement-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .otp-inputs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .otp-inputs input {
+      width: 56px;
+      height: 64px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 8px;
+    }
+
+    .otp-hint {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .account-layout {
+      display: none;
+      min-height: 100vh;
+      background: var(--bg);
+      padding-bottom: 60px;
+    }
+
+    .account-shell {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-height: 100vh;
+    }
+
+    .account-header {
+      background: #fff;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .account-header nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .account-header nav a {
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .account-layout .account-content {
+      display: flex;
+      gap: 0;
+    }
+
+    .account-sidebar {
+      width: 240px;
+      border-right: 1px solid var(--line);
+      padding: 24px;
+      background: #f8fbff;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .account-sidebar .sidebar-title {
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sidebar-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sidebar-links a {
+      font-size: 14px;
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+
+    .sidebar-links a.active,
+    .sidebar-links a:hover {
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .account-main {
+      flex: 1;
+      padding: 32px;
+    }
+
+    .account-section {
+      display: none;
+    }
+
+    .account-section.active {
+      display: block;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .toggle-switch {
+      width: 52px;
+      height: 30px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      position: relative;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .toggle-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s ease;
+    }
+
+    .toggle-switch.active .toggle-thumb {
+      transform: translateX(22px);
+    }
+
+    .plan-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      min-width: 240px;
+      position: relative;
+      background: #fdfdff;
+    }
+
+    .plan-card.recommended::after {
+      content: "Recommended";
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+
+    .plan-card h3 {
+      margin-top: 0;
+    }
+
+    .meter {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--line);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 10px;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .comparison-table th {
+      background: var(--card);
+      font-weight: 600;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-family: "JetBrains Mono", "DM Sans", sans-serif;
+    }
+
+    .status-pill.success {
+      background: #ecfdf6;
+      color: var(--teal);
+    }
+
+    .status-pill.warn {
+      background: #fff7ed;
+      color: var(--warn);
+    }
+
+    .status-pill.danger {
+      background: #fff1f2;
+      color: var(--danger);
+    }
+
+    .team-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .team-table th,
+    .team-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .team-table td.actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dev-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #111118;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+    }
+
+    .dev-nav a {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .pill-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .account-footer {
+      background: #0f0f1a;
+      color: #fff;
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .account-footer a {
+      color: var(--teal);
+    }
+
+    @media (max-width: 1000px) {
+      .auth-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-left-panel {
+        grid-row: 1;
+      }
+
+      .auth-right-panel {
+        padding: 40px 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .auth-layout {
+        min-height: auto;
+      }
+
+      .auth-left-panel {
+        display: none;
+      }
+
+      .auth-right-panel {
+        padding: 32px 20px;
+      }
+
+      .account-sidebar {
+        display: none;
+      }
+
+      .account-header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .account-layout .account-content {
+        flex-direction: column;
+      }
+
+      .account-shell {
+        border-radius: 0;
+      }
+
+      .dev-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toast-container" aria-live="polite"></div>
+
+  <header class="page-header">
+    <a class="brand-wordmark" href="/">
+      <span>MarketingAgents<b>.ai</b></span>
+      <small>AI Marketing OS</small>
+    </a>
+    <nav class="page-nav">
+      <a href="/">Home</a>
+      <a href="/workspaces">Brand Workspace</a>
+      <a href="/agents">Agent Studio</a>
+    </nav>
+    <div class="page-header-actions">
+      <a class="btn primary" href="/workspaces">Start Free</a>
+      <a class="btn ghost" href="/auth-account-system.html#/login">Login</a>
+    </div>
+  </header>
+
+  <div class="auth-layout" data-layout="auth">
+    <div class="auth-left-panel">
+      <div>
+        <h1>MarketingAgents.ai</h1>
+        <p>
+          Build deeper brand context, onboard marketing agents, and run experiments without
+          asking the rest of the org for data. The split-pane experience keeps you focused on
+          the most critical actions.
+        </p>
+        <div class="panel-meta">
+          <span>Enterprise AI OS</span>
+          <span>Trusted by 200+ teams</span>
+        </div>
+      </div>
+      <div>
+        <p>Enterprise + Consultant AI Workflows</p>
+        <p class="login-meta">Need quick access? Use demo credentials: any email · password123</p>
+      </div>
+    </div>
+
+    <div class="auth-right-panel">
+      <div class="auth-route" data-route="#/login">
+        <div class="card">
+          <h2>Sign In</h2>
+          <small>Access your brand workspaces and agent studio</small>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" required type="email" placeholder="you@company.com" />
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" required type="password" placeholder="••••••••" />
+            </div>
+            <div class="inline-row">
+              <div class="checkbox-row">
+                <input id="rememberMe" type="checkbox" />
+                <label for="rememberMe">Remember me</label>
+              </div>
+              <a href="#/forgot-password" class="link-text">Forgot password?</a>
+            </div>
+            <button class="btn primary" type="submit">
+              <span>Sign In</span>
+            </button>
+            <div class="divider">
+              <span></span>
+              <span>or continue with</span>
+              <span></span>
+            </div>
+            <button type="button" class="btn google">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google" width="18" height="18" />
+              Continue with Google
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="auth-route" data-route="#/signup">
+        <div class="card">
+          <div class="signup-steps">
+            <div class="signup-step" data-step="1"></div>
+            <div class="signup-step" data-step="2"></div>
+            <div class="signup-step" data-step="3"></div>
+          </div>
+          <h2>Create an account</h2>
+          <small>Step into the workspace experience in seconds</small>
+          <div id="signupStep1">
+            <div class="step-card">Step 1 · Tell us who you are</div>
+            <form id="signupForm1">
+              <div class="form-group">
+                <label>Full Name <span>*</span></label>
+                <input type="text" name="fullName" placeholder="Komal Singh" required />
+              </div>
+              <div class="form-group">
+                <label>Work Email <span>*</span></label>
+                <input type="email" name="workEmail" placeholder="you@brand.com" required />
+              </div>
+              <div class="form-group">
+                <label>Password <span>*</span></label>
+                <input type="password" name="signupPassword" placeholder="Create a password" required />
+              </div>
+              <div class="form-group">
+                <label>Confirm Password <span>*</span></label>
+                <input type="password" name="signupConfirm" placeholder="Repeat password" required />
+              </div>
+              <button type="button" class="btn primary" data-next-step="1">Next</button>
+            </form>
+          </div>
+          <div id="signupStep2" style="display:none">
+            <div class="step-card">Step 2 · Company details</div>
+            <form id="signupForm2">
+              <div class="form-group">
+                <label>Company Name <span>*</span></label>
+                <input type="text" name="company" placeholder="Marketing Co." required />
+              </div>
+              <div class="form-group">
+                <label>Role <span>*</span></label>
+                <select name="role" required>
+                  <option value="">Select role</option>
+                  <option>CMO</option>
+                  <option>Growth Lead</option>
+                  <option>Freelance Consultant</option>
+                  <option>Marketing Ops</option>
+                </select>
+              </div>
+              <div class="inline-row">
+                <label class="pill-inline">Small (1-9)</label>
+                <label class="pill-inline">Mid (10-99)</label>
+                <label class="pill-inline">Enterprise</label>
+              </div>
+              <div class="form-group">
+                <label>How did you hear about us?</label>
+                <input type="text" placeholder="e.g. LinkedIn, conference" />
+              </div>
+              <button type="button" class="btn primary" data-next-step="2">Next</button>
+            </form>
+          </div>
+          <div id="signupStep3" style="display:none">
+            <div class="step-card">Step 3 · Pick a plan</div>
+            <div class="inline-row">
+              <div class="plan-card" data-plan="free">
+                <h3>Free</h3>
+                <p class="helper-text">£0 · 5 runs per month · 3 workspaces</p>
+                <ul class="helper-text">
+                  <li>Essentials</li>
+                  <li>Community support</li>
+                </ul>
+                <button type="button" class="btn ghost" data-plan-select="free">Select Free</button>
+              </div>
+              <div class="plan-card recommended" data-plan="pro">
+                <h3>Pro</h3>
+                <p class="helper-text">£49/mo · unlimited runs · unlimited workspaces</p>
+                <ul class="helper-text">
+                  <li>Priority support</li>
+                  <li>Workflow automation</li>
+                </ul>
+                <div class="segmented-control" id="billingToggle">
+                  <button type="button" class="active" data-billing="monthly">Monthly</button>
+                  <button type="button" data-billing="annual">Annual (20% off)</button>
+                </div>
+                <button type="button" class="btn primary" data-plan-select="pro">Choose Pro</button>
+              </div>
+            </div>
+            <p class="helper-text">Terms apply · we will send you a verification link next.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-route" data-route="#/forgot-password">
+        <div class="card">
+          <h2>Forgot Password</h2>
+          <small>We will email you a reset link</small>
+          <form id="forgotForm">
+            <div class="form-group">
+              <label>Email <span>*</span></label>
+              <input type="email" placeholder="you@brand.com" required />
+            </div>
+            <button class="btn primary" type="submit">Send Reset Link</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="auth-route" data-route="#/reset-password">
+        <div class="card">
+          <h2>Reset Password</h2>
+          <small>Set a new password for your account</small>
+          <form id="resetForm">
+            <div class="form-group">
+              <label>New Password <span>*</span></label>
+              <input id="resetPassword" type="password" required />
+            </div>
+            <div class="form-group">
+              <label>Confirm Password <span>*</span></label>
+              <input id="resetConfirm" type="password" required />
+            </div>
+            <div class="strength-meter" id="strengthMeter">
+              <div class="strength-segment"></div>
+              <div class="strength-segment"></div>
+              <div class="strength-segment"></div>
+              <div class="strength-segment"></div>
+            </div>
+            <div class="requirement-list" id="passwordRequirements">
+              <div>○ At least 8 characters</div>
+              <div>○ One uppercase letter</div>
+              <div>○ One number</div>
+              <div>○ One special character</div>
+            </div>
+            <button class="btn primary" type="submit">Set New Password</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="auth-route" data-route="#/verify-email">
+        <div class="card">
+          <h2>Verify Email</h2>
+          <small>Enter the 6-digit code we sent you</small>
+          <div class="otp-inputs" id="otpInputs">
+            <input maxlength="1" inputmode="numeric" />
+            <input maxlength="1" inputmode="numeric" />
+            <input maxlength="1" inputmode="numeric" />
+            <input maxlength="1" inputmode="numeric" />
+            <input maxlength="1" inputmode="numeric" />
+            <input maxlength="1" inputmode="numeric" />
+          </div>
+          <p class="otp-hint">Code expires in <span id="otpCountdown">12:34</span></p>
+          <button class="btn primary" id="verifyButton" type="button">Verify Email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="account-layout" data-layout="account">
+    <div class="account-shell">
+      <header class="account-header">
+        <div>
+          <strong>MarketingAgents.ai</strong>
+          <p class="helper-text">Account & security</p>
+        </div>
+        <nav>
+          <a href="#/account">Profile</a>
+          <a href="#/account/plan">Plan</a>
+          <a href="#/account/team">Team</a>
+        </nav>
+        <div class="inline-row">
+          <span class="status-pill success">Online</span>
+          <span class="status-pill warn">Session sync</span>
+        </div>
+      </header>
+      <div class="account-content">
+        <aside class="account-sidebar">
+          <div>
+            <div class="sidebar-title">Account</div>
+            <div class="sidebar-links">
+              <a href="#/account" data-link="account">Profile</a>
+              <a href="#/account/plan" data-link="plan">Plan</a>
+              <a href="#/account/team" data-link="team">Team</a>
+              <a href="#/login" class="link-text">Sign Out</a>
+            </div>
+          </div>
+          <div>
+            <div class="sidebar-title">Support</div>
+            <div class="helper-text">Need help? Email <a href="mailto:hello@marketingagents.ai">hello@marketingagents.ai</a></div>
+          </div>
+        </aside>
+        <main class="account-main">
+          <section class="account-section" data-account-route="#/account">
+            <div class="card">
+              <h3>Profile</h3>
+              <p>Update your display name, title, and timezone.</p>
+              <div class="profile-grid">
+                <div class="form-group">
+                  <label>Display Name</label>
+                  <input value="Komal Singh" />
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input value="komal@marketingagents.ai" disabled />
+                </div>
+                <div class="form-group">
+                  <label>Title</label>
+                  <input value="CMO" />
+                </div>
+                <div class="form-group">
+                  <label>Company</label>
+                  <input value="GlowNest" />
+                </div>
+                <div class="form-group">
+                  <label>Timezone</label>
+                  <select>
+                    <option>Asia/Kolkata</option>
+                    <option>Europe/London</option>
+                    <option>America/New_York</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn primary">Save profile</button>
+              <div class="helper-text" style="margin-top:12px;">
+                <a class="link-text" href="/history">View your run history</a>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Password & security</h3>
+              <div class="profile-grid">
+                <div class="form-group">
+                  <label>Current password</label>
+                  <input type="password" placeholder="••••••" />
+                </div>
+                <div class="form-group">
+                  <label>New password</label>
+                  <input type="password" />
+                </div>
+                <div class="form-group">
+                  <label>Confirm new password</label>
+                  <input type="password" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Two-factor authentication</h3>
+              <div class="inline-row" id="twoFactor">
+                <div>Enable 2FA for every login.</div>
+                <div class="toggle-switch" data-toggle>
+                  <div class="toggle-thumb"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Active sessions</h3>
+              <p class="helper-text">Revoke access on other devices.</p>
+              <ul class="helper-text" style="list-style:none;padding:0;margin:0;">
+                <li>Web · London · <a href="#" class="link-text">Revoke</a></li>
+                <li>Mobile · Mumbai · <a href="#" class="link-text">Revoke</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="account-section" data-account-route="#/account/plan">
+            <div class="card">
+              <h3>Current plan</h3>
+              <p class="helper-text">Pro · £49/mo · auto-renews on May 24</p>
+              <div style="display:flex;gap:16px;margin:16px 0;flex-wrap:wrap;">
+                <div>
+                  <div class="helper-text">Agent Runs</div>
+                  <div class="meter"><div class="meter-fill" style="width:84%"></div></div>
+                  <small>847/1000</small>
+                </div>
+                <div>
+                  <div class="helper-text">Workspaces</div>
+                  <div class="meter"><div class="meter-fill" style="width:60%"></div></div>
+                  <small>9 of unlimited</small>
+                </div>
+              </div>
+              <button class="btn secondary">Upgrade</button>
+            </div>
+            <div class="card">
+              <h3>Plan comparison</h3>
+              <table class="comparison-table">
+                <tr>
+                  <th>Feature</th>
+                  <th>Free</th>
+                  <th>Pro</th>
+                  <th>Enterprise</th>
+                </tr>
+                <tr>
+                  <td>Agent runs</td>
+                  <td>5/mo</td>
+                  <td>Unlimited</td>
+                  <td>Unlimited</td>
+                </tr>
+                <tr>
+                  <td>Workspaces</td>
+                  <td>3</td>
+                  <td>Unlimited</td>
+                  <td>Unlimited + SLA</td>
+                </tr>
+                <tr>
+                  <td>Support</td>
+                  <td>Email</td>
+                  <td>Priority</td>
+                  <td>Dedicated</td>
+                </tr>
+                <tr>
+                  <td>Price</td>
+                  <td>£0</td>
+                  <td>£49/mo</td>
+                  <td>Custom</td>
+                </tr>
+              </table>
+            </div>
+            <div class="card">
+              <h3>Payment method</h3>
+              <p class="helper-text">Visa · •••• 4242 · Expires 09/27</p>
+              <button class="btn ghost">Update card</button>
+            </div>
+            <div class="card">
+              <h3>Billing history</h3>
+              <table class="comparison-table">
+                <tr>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>Mar 22</td>
+                  <td>£49</td>
+                  <td><span class="status-pill success">Paid</span></td>
+                  <td><span class="link-text">PDF</span></td>
+                </tr>
+                <tr>
+                  <td>Feb 22</td>
+                  <td>£49</td>
+                  <td><span class="status-pill success">Paid</span></td>
+                  <td><span class="link-text">PDF</span></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+
+          <section class="account-section" data-account-route="#/account/team">
+            <div class="card">
+              <h3>Manage team</h3>
+              <div class="inline-row" style="gap:16px;flex-wrap:wrap;margin-bottom:12px;">
+                <input class="btn ghost" style="flex:1;min-width:180px;" placeholder="invite@brand.com" />
+                <select class="btn ghost" style="flex:1;min-width:180px;">
+                  <option>Admin</option>
+                  <option>Editor</option>
+                  <option>Viewer</option>
+                </select>
+                <button class="btn primary">Send invite</button>
+              </div>
+              <p class="helper-text">Roles: Admin · Editor · Viewer</p>
+              <table class="team-table">
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+                <tr>
+                  <td>Komal Singh</td>
+                  <td>komal@marketingagents.ai</td>
+                  <td>Admin</td>
+                  <td><span class="status-pill success">Active</span></td>
+                  <td class="actions"><button class="btn ghost" style="font-size:12px">Profile</button></td>
+                </tr>
+                <tr>
+                  <td>Nitin Rao</td>
+                  <td>nitin@glownest.com</td>
+                  <td>Editor</td>
+                  <td><span class="status-pill warn">Pending</span></td>
+                  <td class="actions"><button class="btn ghost" style="font-size:12px">Resend</button></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    <div class="account-footer">
+        <span>© 2025 MarketingAgentsAI</span>
+        <div>
+          <a href="#/account">Profile</a> ·
+          <a href="#/account/plan">Plan</a> ·
+          <a href="#/account/team">Team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="account-footer">
+    <div>
+      <strong>MarketingAgents</strong>
+      <p>Enterprise + Consultant AI Workflows</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/workspaces">Brand Workspace</a>
+      <a href="/agents">Agent Studio</a>
+    </div>
+  </footer>
+
+  <footer class="page-footer">
+    <div>
+      <strong>MarketingAgents</strong>
+      <p class="helper-text">Enterprise + Consultant AI Workflows</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/workspaces">Brand Workspace</a>
+      <a href="/agents">Agent Studio</a>
+      <a href="/history">Run History</a>
+      <a href="mailto:hello@marketingagents.ai">Contact</a>
+    </div>
+  </footer>
+
+  <div class="dev-nav">
+    <span>DEV LINKS</span>
+    <div>
+      <a href="#/login">Login</a>
+      <a href="#/signup">Signup</a>
+      <a href="#/forgot-password">Forgot</a>
+      <a href="#/reset-password">Reset</a>
+      <a href="#/verify-email">Verify</a>
+      <a href="#/account">Account</a>
+      <a href="#/account/plan">Plan</a>
+      <a href="#/account/team">Team</a>
+    </div>
+  </div>
+
+  <script>
+    const authRoutes = ["#/login", "#/signup", "#/forgot-password", "#/reset-password", "#/verify-email"];
+    const accountRoutes = ["#/account", "#/account/plan", "#/account/team"];
+    const allRoutes = [...authRoutes, ...accountRoutes];
+    const authLayout = document.querySelector('[data-layout="auth"]');
+    const accountLayout = document.querySelector('[data-layout="account"]');
+    const toastContainer = document.querySelector(".toast-container");
+    const signupSteps = document.querySelectorAll(".signup-step");
+    const signupRoutes = ["#/signup-step1", "#/signup-step2", "#/signup-step3"];
+    const accountSections = document.querySelectorAll(".account-section");
+
+    let otpTimer = 12 * 60;
+    let otpInterval;
+
+    function toast(message, type = "success", subtext = "") {
+      const node = document.createElement("div");
+      node.className = `toast ${type}`;
+      node.innerHTML = `<strong>${message}</strong>${subtext ? `<small>${subtext}</small>` : ""}`;
+      toastContainer.appendChild(node);
+      setTimeout(() => node.remove(), 4000);
+    }
+
+    function updateLayout() {
+      const hash = (location.hash || "#/login").toLowerCase();
+      if (!allRoutes.includes(hash)) {
+        location.hash = "#/login";
+        return;
+      }
+      const loggedIn = localStorage.getItem("ma_auth") === "true";
+      if (accountRoutes.includes(hash) && !loggedIn) {
+        toast("Sign in required", "error", "Redirecting to login…");
+        setTimeout(() => (location.hash = "#/login"), 800);
+        return;
+      }
+      if (authRoutes.includes(hash) && loggedIn) {
+        location.hash = "#/account";
+        return;
+      }
+      authLayout.style.display = authRoutes.includes(hash) ? "grid" : "none";
+      accountLayout.style.display = accountRoutes.includes(hash) ? "block" : "none";
+      document.querySelectorAll(".auth-route").forEach((node) => {
+        node.classList.toggle("active", node.dataset.route === hash);
+      });
+      document.querySelectorAll("[data-account-route]").forEach((section) => {
+        section.classList.toggle("active", section.dataset.accountRoute === hash);
+      });
+      document.querySelectorAll(".sidebar-links a").forEach((link) => {
+        link.classList.toggle("active", link.dataset.link === hash.replace("#/account", ""));
+      });
+    }
+
+    function handleSignupStep(next) {
+      const stepIndex = parseInt(next, 10);
+      document.querySelectorAll("[id^=signupStep]").forEach((section, idx) => {
+        section.style.display = idx === stepIndex ? "block" : "none";
+      });
+      signupSteps.forEach((step, idx) => step.classList.toggle("active", idx === stepIndex));
+    }
+
+    function handlePasswordStrength(value) {
+      const meter = document.querySelectorAll(".strength-segment");
+      const requirements = [...document.querySelectorAll("#passwordRequirements div")];
+      let score = 0;
+      if (value.length >= 8) score++;
+      if (/[A-Z]/.test(value)) score++;
+      if (/[0-9]/.test(value)) score++;
+      if (/[^A-Za-z0-9]/.test(value)) score++;
+      meter.forEach((seg, idx) => seg.classList.toggle("active", idx < score));
+      requirements[0].textContent = `${score >= 1 ? "✓" : "○"} At least 8 characters`;
+      requirements[1].textContent = `${score >= 2 ? "✓" : "○"} One uppercase letter`;
+      requirements[2].textContent = `${score >= 3 ? "✓" : "○"} One number`;
+      requirements[3].textContent = `${score >= 4 ? "✓" : "○"} One special character`;
+    }
+
+    function handleOtpInput(event) {
+      const target = event.target;
+      if (target.value.length > 0 && target.nextElementSibling) {
+        target.nextElementSibling.focus();
+      }
+    }
+
+    function startOtpTimer() {
+      clearInterval(otpInterval);
+      otpTimer = 12 * 60;
+      const countdown = document.getElementById("otpCountdown");
+      otpInterval = setInterval(() => {
+        otpTimer -= 1;
+        if (otpTimer <= 0) {
+          otpTimer = 0;
+          clearInterval(otpInterval);
+        }
+        const minutes = String(Math.floor(otpTimer / 60)).padStart(2, "0");
+        const seconds = String(otpTimer % 60).padStart(2, "0");
+        countdown.textContent = `${minutes}:${seconds}`;
+      }, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      updateLayout();
+      handleSignupStep(0);
+      startOtpTimer();
+
+      document.getElementById("loginForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const password = form.loginPassword.value;
+        if (password === "password123") {
+          localStorage.setItem("ma_auth", "true");
+          toast("Welcome back", "success", "Logged in successfully");
+          location.hash = "#/account";
+        } else {
+          toast("Invalid credentials", "error", "Use password123 for demo access");
+        }
+      });
+
+      document.querySelectorAll("[data-next-step]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const next = button.dataset.nextStep;
+          handleSignupStep(Number(next));
+        });
+      });
+
+      document.querySelectorAll("[data-plan-select]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const plan = button.dataset.planSelect;
+          toast(`Selected ${plan === "pro" ? "Pro" : "Free"} plan`, "info", "Check your email for verification");
+          location.hash = "#/verify-email";
+        });
+      });
+
+      document.getElementById("billingToggle").addEventListener("click", (event) => {
+        if (event.target.tagName === "BUTTON") {
+          document.querySelectorAll("#billingToggle button").forEach((btn) => btn.classList.remove("active"));
+          event.target.classList.add("active");
+        }
+      });
+
+      document.getElementById("forgotForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        toast("Reset link sent", "info", "Check your inbox in a few minutes");
+      });
+
+      document.getElementById("resetForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        toast("Password updated", "success", "Redirecting to login…");
+        setTimeout(() => (location.hash = "#/login"), 1400);
+      });
+
+      document.getElementById("resetPassword").addEventListener("input", (event) => {
+        handlePasswordStrength(event.target.value);
+      });
+
+      document.getElementById("verifyButton").addEventListener("click", () => {
+        const value = Array.from(document.querySelectorAll(".otp-inputs input"))
+          .map((input) => input.value)
+          .join("");
+        if (value === "123456") {
+          toast("Email verified", "success", "Welcome to MarketingAgents.ai");
+          localStorage.setItem("ma_auth", "true");
+          location.hash = "#/account";
+        } else {
+          toast("Invalid code", "error", "123456 works for demo");
+          document.querySelectorAll(".otp-inputs input").forEach((input) => (input.value = ""));
+        }
+      });
+
+      document.querySelectorAll(".otp-inputs input").forEach((input) => {
+        input.addEventListener("input", handleOtpInput);
+        input.addEventListener("keydown", (event) => {
+          if (event.key === "Backspace" && !event.target.value && event.target.previousElementSibling) {
+            event.target.previousElementSibling.focus();
+          }
+        });
+      });
+
+      document.querySelector("[data-toggle]").addEventListener("click", (event) => {
+        event.currentTarget.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".sidebar-links a").forEach((link) => {
+        link.addEventListener("click", () => setTimeout(updateLayout, 50));
+      });
+
+      handleHashChange();
+    });
+
+    function handleHashChange() {
+      updateLayout();
+    }
+
+    window.addEventListener("hashchange", handleHashChange);
+  </script>
+</body>
+</html>

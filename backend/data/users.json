@@ -1,0 +1,16 @@
+[
+  {
+    "email": "kumarpritam84@gmail.com",
+    "name": "kumar pritam",
+    "tier": "free",
+    "created_at": "2026-04-09T01:41:25.931510",
+    "runs_used": 0
+  },
+  {
+    "email": "test@example.com",
+    "name": "Test User",
+    "tier": "free",
+    "created_at": "2026-04-09T12:40:01.097597",
+    "runs_used": 0
+  }
+]

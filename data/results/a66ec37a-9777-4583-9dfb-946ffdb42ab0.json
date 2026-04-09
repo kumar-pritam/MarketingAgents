@@ -1,0 +1,172 @@
+{
+  "context": {
+    "brand_name": "Dettol",
+    "category": "Bathing Soap",
+    "industry": "Retail",
+    "region": "India",
+    "competitors": [
+      "- Lux",
+      "- Dove",
+      "- Pears",
+      "- Cinthol",
+      "- Santoor"
+    ],
+    "keywords": [
+      "- best bathing soap for family",
+      "- soap for dry skin",
+      "- long lasting fragrance soap",
+      "- antibacterial bathing soap",
+      "- soap for sensitive skin",
+      "- moisturizing body soap",
+      "- affordable soap brands in india",
+      "- herbal bathing soap",
+      "- soap for summer sweat control",
+      "- everyday use bathing bar"
+    ],
+    "audit_id": "a66ec37a-9777-4583-9dfb-946ffdb42ab0",
+    "created_at": "2026-03-28T12:15:39.120811+00:00"
+  },
+  "queries": [
+    {
+      "query_id": "q_001",
+      "text": "Best Bathing Soap for Bathing Soap",
+      "type": "informational",
+      "target_topic": "Bathing Soap"
+    },
+    {
+      "query_id": "q_002",
+      "text": "Dettol or - Dove: which is better for - best bathing soap for family",
+      "type": "comparative",
+      "target_topic": "- best bathing soap for family"
+    },
+    {
+      "query_id": "q_003",
+      "text": "What are the pros and cons of leading Bathing Soap options for - soap for dry skin",
+      "type": "evaluative",
+      "target_topic": "- soap for dry skin"
+    }
+  ],
+  "parsed_results": [
+    {
+      "query_id": "q_001",
+      "brand_mentioned": true,
+      "brand_position": "buried",
+      "brand_sentiment": "mixed",
+      "brand_context": "compared",
+      "competitors_mentioned": [
+        {
+          "name": "- Lux",
+          "position": "buried",
+          "sentiment": "mixed"
+        },
+        {
+          "name": "- Dove",
+          "position": "buried",
+          "sentiment": "mixed"
+        }
+      ],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_002",
+      "brand_mentioned": true,
+      "brand_position": "second",
+      "brand_sentiment": "mixed",
+      "brand_context": "compared",
+      "competitors_mentioned": [
+        {
+          "name": "- Dove",
+          "position": "first",
+          "sentiment": "mixed"
+        }
+      ],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_003",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "positive",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    }
+  ],
+  "score": {
+    "audit_id": "a66ec37a-9777-4583-9dfb-946ffdb42ab0",
+    "brand_name": "Dettol",
+    "ai_sov_pct": 66.67,
+    "visibility_score": 54.67,
+    "competitor_scores": {
+      "- Lux": {
+        "ai_sov_pct": 33.33,
+        "visibility_score": 34.33
+      },
+      "- Dove": {
+        "ai_sov_pct": 66.67,
+        "visibility_score": 58.17
+      },
+      "- Pears": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- Cinthol": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- Santoor": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      }
+    },
+    "gaps": [],
+    "total_queries": 3,
+    "tokens_used": 3725,
+    "runtime_seconds": 83.78
+  },
+  "recommendations": [
+    {
+      "topic": "Bathing Soap trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- Lux"
+    },
+    {
+      "topic": "Bathing Soap trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- Lux"
+    },
+    {
+      "topic": "Bathing Soap trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- Lux"
+    },
+    {
+      "topic": "Bathing Soap trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- Lux"
+    },
+    {
+      "topic": "Bathing Soap trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "- Lux"
+    }
+  ],
+  "runner_stats": {
+    "total_tokens": 3725,
+    "completed": 3,
+    "failed": 0,
+    "requests_used_today": 19,
+    "warnings": []
+  },
+  "gsc_insights": []
+}

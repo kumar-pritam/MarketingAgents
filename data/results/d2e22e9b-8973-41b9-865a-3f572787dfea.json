@@ -1,0 +1,155 @@
+{
+  "context": {
+    "brand_name": "GlowNest",
+    "category": "Skincare Brand",
+    "industry": "Retail",
+    "region": "India",
+    "competitors": [
+      "Mamaearth",
+      "- Minimalist",
+      "- The Derma Co",
+      "- Plum",
+      "- Dot & Key"
+    ],
+    "keywords": [
+      "`best vitamin c serum`",
+      "- `niacinamide for oily skin`",
+      "- `sunscreen for humid weather`",
+      "- `acne marks treatment`",
+      "- `fragrance free skincare`",
+      "- `sensitive skin routine`",
+      "- `affordable skincare brands`",
+      "- `dermatologist recommended skincare`",
+      "- `beginner skincare routine`",
+      "- `skincare for combination skin`"
+    ],
+    "audit_id": "d2e22e9b-8973-41b9-865a-3f572787dfea",
+    "created_at": "2026-03-28T12:00:39.085114+00:00"
+  },
+  "queries": [
+    {
+      "query_id": "q_001",
+      "text": "Best Skincare Brand for Skincare Brand",
+      "type": "informational",
+      "target_topic": "Skincare Brand"
+    },
+    {
+      "query_id": "q_002",
+      "text": "GlowNest or - Minimalist: which is better for `best vitamin c serum`",
+      "type": "comparative",
+      "target_topic": "`best vitamin c serum`"
+    },
+    {
+      "query_id": "q_003",
+      "text": "What are the pros and cons of leading Skincare Brand options for - `niacinamide for oily skin`",
+      "type": "evaluative",
+      "target_topic": "- `niacinamide for oily skin`"
+    }
+  ],
+  "parsed_results": [
+    {
+      "query_id": "q_001",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "mixed",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_002",
+      "brand_mentioned": true,
+      "brand_position": "first",
+      "brand_sentiment": "mixed",
+      "brand_context": "compared",
+      "competitors_mentioned": [],
+      "source_signal": false
+    },
+    {
+      "query_id": "q_003",
+      "brand_mentioned": false,
+      "brand_position": "absent",
+      "brand_sentiment": "mixed",
+      "brand_context": "absent",
+      "competitors_mentioned": [],
+      "source_signal": false
+    }
+  ],
+  "score": {
+    "audit_id": "d2e22e9b-8973-41b9-865a-3f572787dfea",
+    "brand_name": "GlowNest",
+    "ai_sov_pct": 33.33,
+    "visibility_score": 35.33,
+    "competitor_scores": {
+      "Mamaearth": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- Minimalist": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- The Derma Co": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- Plum": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      },
+      "- Dot & Key": {
+        "ai_sov_pct": 0.0,
+        "visibility_score": 0.0
+      }
+    },
+    "gaps": [],
+    "total_queries": 3,
+    "tokens_used": 1833,
+    "runtime_seconds": 73.13
+  },
+  "recommendations": [
+    {
+      "topic": "Skincare Brand trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "Mamaearth"
+    },
+    {
+      "topic": "Skincare Brand trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "Mamaearth"
+    },
+    {
+      "topic": "Skincare Brand trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "Mamaearth"
+    },
+    {
+      "topic": "Skincare Brand trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "Mamaearth"
+    },
+    {
+      "topic": "Skincare Brand trust and proof content",
+      "content_format": "Customer proof page",
+      "why_this_works": "Improves authority-seeking and evaluative query performance.",
+      "urgency": "Watch",
+      "competitor_to_displace": "Mamaearth"
+    }
+  ],
+  "runner_stats": {
+    "total_tokens": 1833,
+    "completed": 3,
+    "failed": 0,
+    "requests_used_today": 13,
+    "warnings": []
+  },
+  "gsc_insights": []
+}
