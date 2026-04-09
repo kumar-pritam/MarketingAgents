@@ -1,0 +1,17 @@
+[Unit]
+Description=MarketingAgents Streamlit App
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/MarketingAgents
+ExecStart=/home/ubuntu/MarketingAgents/venv/bin/streamlit run /home/ubuntu/MarketingAgents/app.py --server.port=8501 --server.address=127.0.0.1
+Restart=always
+RestartSec=5
+Environment="PATH=/home/ubuntu/MarketingAgents/venv/bin"
+Environment="OPENAI_API_KEY=${OPENAI_API_KEY}"
+Environment="OPENROUTER_API_KEY=${OPENROUTER_API_KEY}"
+
+[Install]
+WantedBy=multi-user.target
