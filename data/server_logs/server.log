@@ -3039,3 +3039,4 @@ openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit excee
 2026-03-29 01:36:16 | INFO | app | LOGGER_INIT dev_log_dir=/Users/kumarpritam/Documents/GitHub/MarketngAgents/data/dev_logs xf_file=/Users/kumarpritam/Documents/GitHub/MarketngAgents/xf.log
 2026-03-29 01:36:22 | INFO | app | LOGGER_INIT dev_log_dir=/Users/kumarpritam/Documents/GitHub/MarketngAgents/data/dev_logs xf_file=/Users/kumarpritam/Documents/GitHub/MarketngAgents/xf.log
 2026-03-29 19:24:08 | INFO | app | LOGGER_INIT dev_log_dir=/Users/kumarpritam/Documents/GitHub/MarketngAgents/data/dev_logs xf_file=/Users/kumarpritam/Documents/GitHub/MarketngAgents/xf.log
+2026-04-10 09:29:25 | INFO | app | LOGGER_INIT dev_log_dir=/Users/kumarpritam/Documents/GitHub/MarketingAgents/data/dev_logs xf_file=/Users/kumarpritam/Documents/GitHub/MarketingAgents/xf.log

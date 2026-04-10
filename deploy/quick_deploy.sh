@@ -2,7 +2,7 @@
 
 set -e
 
-echo "=== Quick Deploy (Dev Mode) ==="
+echo "=== MarketingAgents Quick Deploy (Port 8502) ==="
 
 cd /home/ubuntu/MarketingAgents
 
@@ -17,10 +17,10 @@ rm -rf .venv
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install "python-jose[cryptography]" "passlib[bcrypt]" psycopg2-binary bcrypt python-multipart slowapi httpx email-validator
+pip install "python-jose[cryptography]" "passlib[bcrypt]" psycopg2-binary bcrypt python-multipart slowapi httpx email-validator streamlit
 pip install -r requirements.txt
 
-# Setup Frontend (dev mode - no build needed)
+# Setup Frontend
 echo "Setting up Frontend..."
 cd /home/ubuntu/MarketingAgents/frontend
 npm install --legacy-peer-deps
@@ -30,8 +30,12 @@ echo "Stopping existing services..."
 sudo systemctl stop marketingagents 2>/dev/null || true
 pm2 stop frontend 2>/dev/null || true
 
-# Start Backend
-echo "Starting Backend..."
+# Install PM2 if not installed
+echo "Installing PM2..."
+sudo npm install -g pm2
+
+# Start Backend on port 8502
+echo "Starting Backend on port 8502..."
 sudo cp /home/ubuntu/MarketingAgents/deploy/marketingagents.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable marketingagents
@@ -45,13 +49,13 @@ pm2 save
 
 # Setup Nginx
 echo "Configuring Nginx..."
-sudo tee /etc/nginx/sites-available/marketingagents > /dev/null <<EOF
+sudo tee /etc/nginx/sites-available/marketingagents > /dev/null <<'EOF'
 upstream frontend {
     server 127.0.0.1:3000;
 }
 
 upstream backend {
-    server 127.0.0.1:8501;
+    server 127.0.0.1:8502;
 }
 
 server {
@@ -61,21 +65,23 @@ server {
     location / {
         proxy_pass http://frontend;
         proxy_http_version 1.1;
-        proxy_set_header Upgrade \$http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host \$host;
-        proxy_set_header X-Real-IP \$remote_addr;
-        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto \$scheme;
-        proxy_cache_bypass \$http_upgrade;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
     }
 
     location /api/ {
         proxy_pass http://backend/;
-        proxy_set_header Host \$host;
-        proxy_set_header X-Real-IP \$remote_addr;
-        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto \$scheme;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400;
     }
 }
 EOF
@@ -87,7 +93,15 @@ sudo systemctl reload nginx
 
 echo ""
 echo "=== Deployed ==="
+echo ""
+echo "Services:"
+echo "  Frontend (Next.js): http://localhost:3000"
+echo "  Backend (Streamlit): http://localhost:8502"
+echo "  Nginx: http://localhost:80"
+echo ""
 echo "Check status:"
 echo "  pm2 status"
 echo "  sudo systemctl status marketingagents"
 echo "  sudo systemctl status nginx"
+echo ""
+echo "Access at: http://YOUR_EC2_PUBLIC_IP"

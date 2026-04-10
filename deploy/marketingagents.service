@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/MarketingAgents/backend
-ExecStart=/home/ubuntu/MarketingAgents/backend/.venv/bin/streamlit run /home/ubuntu/MarketingAgents/app.py --server.port=8501 --server.address=127.0.0.1
+ExecStart=/home/ubuntu/MarketingAgents/backend/.venv/bin/streamlit run /home/ubuntu/MarketingAgents/app.py --server.port=8502 --server.address=127.0.0.1
 Restart=always
 RestartSec=5
 Environment="PATH=/home/ubuntu/MarketingAgents/backend/.venv/bin"

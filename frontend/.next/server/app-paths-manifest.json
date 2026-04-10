@@ -1,5 +1,6 @@
 {
-  "/agents/page": "app/agents/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
+  "/agents/page": "app/agents/page.js",
   "/run/[id]/page": "app/run/[id]/page.js"
 }

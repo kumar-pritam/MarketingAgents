@@ -4380,3 +4380,81 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-04-09 15:46:33 | INFO     | app.core.middleware | Request completed: POST /api/v1/agents/run -> 200 | Request ID: unknown
 2026-04-09 15:46:33 | INFO     | app.core.middleware | Request started: POST /api/v1/admin/track-run | Request ID: unknown
 2026-04-09 15:46:33 | INFO     | app.core.middleware | Request completed: POST /api/v1/admin/track-run -> 200 | Request ID: unknown
+2026-04-10 09:54:01 | INFO     | root | Logging initialized (JSON mode: False)
+2026-04-10 09:56:19 | INFO     | app.core.middleware | Request started: GET /api/v1/agents | Request ID: unknown
+2026-04-10 09:56:19 | INFO     | app.core.middleware | Request completed: GET /api/v1/agents -> 200 | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request started: GET /api/v1/workspaces | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request started: GET /api/v1/agents/content_agent | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request started: GET /api/v1/workspaces | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request started: GET /api/v1/agents/content_agent | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request completed: GET /api/v1/workspaces -> 200 | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request completed: GET /api/v1/agents/content_agent -> 200 | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request completed: GET /api/v1/workspaces -> 200 | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request completed: GET /api/v1/agents/content_agent -> 200 | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request started: GET /api/v1/integrations/audi-workspace-ws | Request ID: unknown
+2026-04-10 09:56:28 | INFO     | app.core.middleware | Request completed: GET /api/v1/integrations/audi-workspace-ws -> 200 | Request ID: unknown
+2026-04-10 09:56:45 | INFO     | app.core.middleware | Request started: POST /api/v1/agents/run | Request ID: unknown
+2026-04-10 09:56:45 | INFO     | app.runtime | AGENT_RUN_SYNC_START workspace_id=audi-workspace-ws agent_id=content_agent
+2026-04-10 09:56:45 | INFO     | app.agent.content | CONTENT_AGENT_LLM_CALL workspace_id=audi-workspace-ws payload={'brand_context': {'brand_name': 'Audi', 'website': 'https://www.audi.com', 'industry': 'Automotive / Luxury Vehicle Manufacturing', 'positioning': 'Premium German automotive brand that blends cutting‑edge technology, high performance, and sophisticated design to deliver a distinctive driving experience.', 'additional_details': 'Company: Audi', 'key_pages': ['https://www.audi.com', 'https://www.audi.com/us/en/models.html', 'https://www.audi.com/us/en/e-tron.html'], 'assets': []}, 'campaign_input': {'brand_name': 'Audi', 'brand_context': 'Audi in A (India) appears positioned as Positioned as a technologically advanced, design‑led luxury brand emphasizing quattro all‑wheel drive and progressive mo. Primary risk: Risks include high ownership cost, limited service network in tier‑2/3 cities, and perception lag vs. German rivals in E.\nPremium German automotive brand that blends cutting‑edge technology, high performance, and sophisticated design to deliver a distinctive driving experience.\nCompany: Audi', 'content_type': ['Email'], 'target_audience': 'urban', 'campaign_objective': 'buy', 'tone': 'Conversational', 'workspace_id': 'audi-workspace-ws'}}
+2026-04-10 09:56:45 | DEBUG    | app.llm.openrouter | OPENROUTER_REQUEST model=nvidia/nemotron-3-super-120b-a12b:free endpoint=https://openrouter.ai/api/v1/chat/completions body={'model': 'nvidia/nemotron-3-super-120b-a12b:free', 'messages': [{'role': 'system', 'content': 'You are a senior marketing strategist and copywriter. Return ONLY valid JSON with marketer-friendly, actionable content.'}, {'role': 'user', 'content': 'Generate a campaign-ready content pack.\nJSON keys required: campaign_summary, email_variants (2-3), push_notifications (2-4), ad_headlines (6-10), ad_primary_texts (2-4), creative_brief, recommended_next_steps (3-5).\nUse this context:\n{"brand_context": {"brand_name": "Audi", "website": "https://www.audi.com", "industry": "Automotive / Luxury Vehicle Manufacturing", "positioning": "Premium German automotive brand that blends cutting\\u2011edge technology, high performance, and sophisticated design to deliver a distinctive driving experience.", "additional_details": "Company: Audi", "key_pages": ["https://www.audi.com", "https://www.audi.com/us/en/models.html", "https://www.audi.com/us/en/e-tron.html"], "assets": []}, "campaign_input": {"brand_name": "Audi", "brand_context": "Audi in A (India) appears positioned as Positioned as a technologically advanced, design\\u2011led luxury brand emphasizing quattro all\\u2011wheel drive and progressive mo. Primary risk: Risks include high ownership cost, limited service network in tier\\u20112/3 cities, and perception lag vs. German rivals in E.\\nPremium German automotive brand that blends cutting\\u2011edge technology, high performance, and sophisticated design to deliver a distinctive driving experience.\\nCompany: Audi", "content_type": ["Email"], "target_audience": "urban", "campaign_objective": "buy", "tone": "Conversational", "workspace_id": "audi-workspace-ws"}}'}], 'temperature': 0.5, 'max_tokens': 1400}
+2026-04-10 09:57:31 | DEBUG    | app.llm.openrouter | OPENROUTER_RESPONSE text={
+  "campaign_summary": "A conversational, urban‑focused campaign that showcases Audi’s blend of cutting‑edge technology, quattro performance, and sophisticated design to drive purchase intent among city‑dwelling luxury seekers in India.",
+  "email_variants": [
+    {
+      "subject": "Ready to feel the future of driving? Meet the new Audi.",
+      "body": "Hi {{FirstName}},\n\nImagine gliding through city streets with quattro grip, a digital cockpit that anticipates your every move, and a design that turns heads at every signal. The latest Audi lineup brings that experience to life – and it’s waiting for you at your nearest showroom.\n\nTap below to explore the models, book a test drive, or get a personalized quote.\n\n[Explore Audi]  \n[Book a Test Drive]\n\nDrive progressive. Drive Audi.\n\nBest,\nThe Audi India Team"
+    },
+    {
+      "subject": "Your city, your rules – upgrade to Audi’s urban luxury.",
+      "body": "Hey {{FirstName}},\n\nUrban life demands a car that’s as smart, agile, and stylish as you are. Audi’s new e‑tron and TDI models deliver instant electric torque, quattro stability, and a cabin crafted for comfort – all backed by Audi’s legendary German engineering.\n\nWhy wait? Discover exclusive urban‑owner benefits, schedule a virtual walk‑through, or visit the showroom today.\n\n[See the Range]  \n[Schedule a Virtual Tour]\n\nLet’s redefine your drive.\n\nCheers,\nAudi India"
+    }
+  ],
+  "push_notifications": [
+    {
+      "title": "Feel quattro in the city 🚗💨",
+      "body": "Experience unmatched grip and stability on every urban turn. Tap to learn more."
+    },
+    {
+      "title": "Luxury tech that knows you 🌟",
+      "body": "Virtual cockpit, MMI touch response, and seamless connectivity – all inside the new Audi."
+    },
+    {
+      "title": "Electric performance, zero compromise ⚡",
+      "body": "Audi e‑tron delivers instant torque and quattro AWD. Explore the range now."
+    },
+    {
+      "title": "Book your test drive – city streets await 🏙️",
+      "body": "Schedule a quick drive and feel the Audi difference today."
+    }
+  ],
+  "ad_headlines": [
+    "Drive the Future, Today",
+    "Quattro Grip for City Streets",
+    "Luxury Meets Intelligence",
+    "Electric Power, Audi Precision",
+    "Turn Heads at Every Signal",
+    "Your Urban Escape, Engineered",
+    "Innovation You Can Feel",
+    "Performance That Adapts",
+    "Design That Leads",
+    "Experience Audi’s Progressive Edge"
+  ],
+  "ad_primary_texts": [
+    "Discover how Audi’s quattro technology and digital cockpit transform everyday city driving into a thrilling experience. Book a test drive now.",
+    "From electric torque to timeless design, the new Audi lineup is built for the urban explorer who refuses to compromise. Learn more and claim your exclusive offer.",
+    "Step inside a cabin where cutting‑edge tech meets handcrafted luxury. See why Audi is the choice of progressive drivers across India’s metros.",
+    "Feel the confidence of quattro grip and the silence of electric power – all in one sophisticated package. Visit your nearest Audi showroom today."
+  ],
+  "creative_brief": "Visuals should highlight sleek Audi models navigating vibrant Indian cityscapes – wet streets, neon lights, and bustling traffic – to emphasize quattro stability and refined design. Use a conversational tone with copy that speaks directly to urban professionals seeking performance, technology, and status. Primary CTA: ‘Book a Test Drive’ or ‘Explore the Range’, supported by secondary actions like ‘Get a Quote’ or ‘Schedule a Virtual Tour’. Color palette: Audi’s signature silver, black, and deep blue accents, with occasional pops of city‑light orange to convey energy. Incorporate subtle motion graphics (e.g., light trails, digital cockpit UI) to convey tech‑forward messaging.",
+  "recommended_next_steps": [
+    "Finalize creative assets (static images, short video loops, and interactive HTML5 banners) based on the brief and allocate media budget across high‑impact digital platforms (YouTube, Instagram, programmatic display) targeting urban Audi prospects aged 28‑45 in Tier‑1 cities.",
+    "Set up email automation workflows using the two variants, segmenting leads by interest (e‑tron vs. TDI) and engagement level, with A/B testing of subject lines and CTAs over a 2‑week period.",
+    "Launch push notification series via the Audi app and web push, timing messages during peak commuting hours (7‑9 am and 6‑8 pm) and monitoring opt‑in rates and click‑through performance.",
+    "Track key performance indicators (CTR, VTR, test‑drive bookings, showroom visits) weekly; optimize creative and bidding strategies based on real‑time data.",
+    "After initial run, conduct a post‑campaign debrief to gather insights on audience response, refine messaging for future phases, and plan a follow‑up loyalty or service‑offer campaign."
+  ]
+}
+2026-04-10 09:57:31 | INFO     | app.runtime | AGENT_RUN_SYNC_END run_id=66286caf-c75a-4d70-9b4b-0f02a4b1986d status=completed
+2026-04-10 09:57:31 | INFO     | app.core.middleware | Request completed: POST /api/v1/agents/run -> 200 | Request ID: unknown
+2026-04-10 09:57:31 | INFO     | app.core.middleware | Request started: POST /api/v1/admin/track-run | Request ID: unknown
+2026-04-10 09:57:32 | INFO     | app.core.middleware | Request completed: POST /api/v1/admin/track-run -> 200 | Request ID: unknown
