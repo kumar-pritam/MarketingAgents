@@ -1,5 +1,12 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/agents/[id]/page": "app/agents/[id]/page.js",
   "/agents/page": "app/agents/page.js",
-  "/run/[id]/page": "app/run/[id]/page.js",
-  "/page": "app/page.js"
+  "/history/page": "app/history/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/page": "app/page.js",
+  "/workspaces/page": "app/workspaces/page.js",
+  "/run/[id]/page": "app/run/[id]/page.js"
 }

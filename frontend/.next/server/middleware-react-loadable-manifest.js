@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"lib/adminApi.ts -> ./analytics\":{\"id\":\"lib/adminApi.ts -> ./analytics\",\"files\":[]}}"
+self.__REACT_LOADABLE_MANIFEST='{"lib/adminApi.ts -> ./analytics":{"id":3567,"files":["static/chunks/567.1dcc5b50d7661634.js"]}}';

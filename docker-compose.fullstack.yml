@@ -12,11 +12,17 @@ services:
     restart: unless-stopped
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: node:20-slim
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: npm start
     ports:
       - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=/api/v1
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
     restart: unless-stopped
     depends_on:
       - backend
