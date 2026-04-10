@@ -1,23 +1,22 @@
-FROM python:3.12-slim-bookworm
+FROM python:3.12-alpine
 
 WORKDIR /app
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        curl \
-        gcc \
-        g++ \
-        libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+    curl \
+    gcc \
+    g++ \
+    libpq-dev \
+    postgresql-dev \
+    musl-dev
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN rm -rf /root/.cache/pip
-
 COPY . .
 
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
 
 EXPOSE 8000
 

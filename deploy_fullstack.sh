@@ -6,21 +6,21 @@ echo "=== Marketing Agents Full Stack Deployment ==="
 echo ""
 
 GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "${GREEN}[1/5] Updating system...${NC}"
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y docker.io docker-compose curl
+# Clean up first
+echo -e "${GREEN}[1/7] Cleaning up...${NC}"
+sudo docker system prune -af --volumes 2>/dev/null || true
 
-# Step 2: Install Docker if not present
+# Update and install Docker
+echo -e "${GREEN}[2/7] Checking Docker...${NC}"
 if ! command -v docker &> /dev/null; then
-    sudo systemctl start docker
-    sudo systemctl enable docker
+    sudo apt update && sudo apt install -y docker.io docker-compose
 fi
+sudo systemctl start docker 2>/dev/null || true
 
-# Step 3: Clone/pull repo
-echo -e "${GREEN}[2/5] Updating code...${NC}"
+# Get code
+echo -e "${GREEN}[3/7] Getting code...${NC}"
 if [ -d "MarketingAgents" ]; then
     cd MarketingAgents
     git pull origin main
@@ -29,30 +29,32 @@ else
     cd MarketingAgents
 fi
 
-# Step 4: Setup environment
-echo -e "${GREEN}[3/5] Setting up environment...${NC}"
-if [ ! -f ".env" ]; then
-    if [ -f ".env.example" ]; then
-        cp .env.example .env
-    fi
+# Setup env
+echo -e "${GREEN}[4/7] Environment...${NC}"
+if [ ! -f ".env" ] && [ -f ".env.example" ]; then
+    cp .env.example .env
 fi
 
-# Step 5: Build and run
-echo -e "${GREEN}[4/5] Building containers...${NC}"
-sudo docker-compose -f docker-compose.fullstack.yml down -v
-sudo docker-compose -f docker-compose.fullstack.yml up -d --build
+# Build backend only
+echo -e "${GREEN}[5/7] Building Backend...${NC}"
+sudo docker build -t ma-backend ./backend
 
-# Step 6: Verify
-echo -e "${GREEN}[5/5] Verifying deployment...${NC}"
-sleep 10
-sudo docker ps
+# Clean before frontend
+sudo docker image prune -af --filter "until=5m" 2>/dev/null || true
+
+# Build frontend
+echo -e "${GREEN}[6/7] Building Frontend...${NC}"
+sudo docker build -t ma-frontend ./frontend
+
+# Clean before running
+sudo docker image prune -af --filter "until=5m" 2>/dev/null || true
+
+# Run all
+echo -e "${GREEN}[7/7] Starting services...${NC}"
+sudo docker-compose -f docker-compose.fullstack.yml up -d
 
 echo ""
-echo -e "${GREEN}=== Deployment Complete! ===${NC}"
+echo -e "${GREEN}=== Done! ===${NC}"
+echo "Access at: http://13.232.143.135"
 echo ""
-echo "Access at: http://<YOUR_EC2_IP>"
-echo "Backend API: http://<YOUR_EC2_IP>/api/v1"
-echo ""
-echo "Commands:"
-echo "  docker-compose -f docker-compose.fullstack.yml logs -f"
-echo "  docker-compose -f docker-compose.fullstack.yml restart"
+echo "Logs: docker-compose -f docker-compose.fullstack.yml logs -f"
