@@ -23,3 +23,6 @@ frontend/.next/
 .DS_Store
 *.mp4
 *.mov
+backend/.venv/
+backend/__pycache__/
+backend/app/__pycache__/
