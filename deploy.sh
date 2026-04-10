@@ -58,6 +58,8 @@ fi
 
 # Step 5: Build and run Docker
 echo -e "${GREEN}[5/6] Building and starting Docker container...${NC}"
+sudo docker-compose down -v
+sudo docker system prune -a --volumes -f
 sudo docker-compose up -d --build
 
 # Step 6: Verify deployment
