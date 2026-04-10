@@ -1,25 +1,18 @@
-FROM node:20-alpine AS builder
+FROM node:20-slim
 
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
-RUN npm ci --legacy-peer-deps
+
+RUN npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 
 COPY . .
+
 RUN npm run build
-
-FROM node:20-alpine
-
-WORKDIR /app
-
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json .
-COPY --from=builder /app/node_modules ./node_modules
 
 ENV NEXT_PUBLIC_API_URL=/api/v1
 ENV NODE_ENV=production
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
