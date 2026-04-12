@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { apiGet } from "../../lib/api";
 import { getActiveWorkspaceId } from "../../lib/workspace";
 
@@ -10,7 +11,9 @@ type WorkspaceSummary = {
   brand_name: string;
 };
 
-export default function HistoryPage() {
+function HistoryContent() {
+  const searchParams = useSearchParams();
+  const agentFilter = searchParams.get("agent");
   const [workspaceId, setWorkspaceId] = useState(getActiveWorkspaceId());
   const [workspaces, setWorkspaces] = useState<WorkspaceSummary[]>([]);
   const [rows, setRows] = useState<any[]>([]);
@@ -21,12 +24,22 @@ export default function HistoryPage() {
       .catch(() => setWorkspaces([]));
   }, []);
 
+  useEffect(() => {
+    if (workspaceId) {
+      load();
+    }
+  }, [workspaceId]);
+
   async function load() {
     const data = await apiGet<any[]>(`/agents/history/${workspaceId}`);
     setRows(data);
   }
 
-  const statusCounts = rows.reduce<Record<string, number>>((acc, row) => {
+  const filteredRows = agentFilter 
+    ? rows.filter((row) => row.agent_id === agentFilter)
+    : rows;
+
+  const statusCounts = filteredRows.reduce<Record<string, number>>((acc, row) => {
     const key = row.status?.toLowerCase() || "unknown";
     acc[key] = (acc[key] || 0) + 1;
     return acc;
@@ -45,19 +58,28 @@ export default function HistoryPage() {
         </div>
         <div className="hero-stats">
           <div>
-            <strong>{rows.length}</strong>
+            <strong>{filteredRows.length}</strong>
             <span>runs loaded</span>
           </div>
           <div>
-            <strong>{rows.filter((row) => row.status === "COMPLETED").length}</strong>
+            <strong>{filteredRows.filter((row) => row.status === "COMPLETED").length}</strong>
             <span>successful</span>
           </div>
           <div>
-            <strong>{rows.filter((row) => row.status !== "COMPLETED").length}</strong>
+            <strong>{filteredRows.filter((row) => row.status !== "COMPLETED").length}</strong>
             <span>under review</span>
           </div>
         </div>
       </section>
+
+      {agentFilter && (
+        <div className="card" style={{ marginBottom: "16px", padding: "12px 16px", background: "#f0f9ff", border: "1px solid #bae6fd" }}>
+          <span style={{ fontSize: "14px", color: "#0369a1" }}>
+            Filtered by agent: <strong>{agentFilter}</strong>
+          </span>
+          <a href="/history" style={{ marginLeft: "12px", fontSize: "13px", color: "#4f6ef7" }}>Clear filter</a>
+        </div>
+      )}
 
       <div className="card history-filter-card">
         <div className="filter-grid">
@@ -107,7 +129,7 @@ export default function HistoryPage() {
             <a href="/agents" className="btn">Run your first agent</a>
           </div>
         ) : (
-          rows.map((row) => (
+          filteredRows.map((row) => (
             <article className="history-card" key={row.run_id}>
               <div className="history-card-header">
                 <span className="mono">Run {row.run_id}</span>
@@ -125,5 +147,13 @@ export default function HistoryPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function HistoryPage() {
+  return (
+    <Suspense fallback={<div className="history-page"><p>Loading...</p></div>}>
+      <HistoryContent />
+    </Suspense>
   );
 }
